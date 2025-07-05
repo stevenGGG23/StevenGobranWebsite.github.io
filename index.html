@@ -562,11 +562,48 @@
       style.textContent = `@keyframes cursorFade{0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0);}}`;
       document.head.appendChild(style);
 
+      // Initialize EmailJS (You'll need to replace these with your actual EmailJS credentials)
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+
       // Form submission
-      document.querySelector("form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Thank you for your message! I'll get back to you soon.");
-      });
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submit-btn");
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          // For now, we'll use a fallback method since EmailJS needs setup
+          // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values from EmailJS
+
+          // Temporary fallback - opens email client
+          const formData = new FormData(this);
+          const name = formData.get("from_name");
+          const email = formData.get("from_email");
+          const message = formData.get("message");
+
+          const subject = `Portfolio Contact from ${name}`;
+          const body = `Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+          const mailtoLink = `mailto:stevengobran@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+          window.location.href = mailtoLink;
+
+          // Reset form and button
+          this.reset();
+          submitBtn.textContent = "Email Client Opened";
+          submitBtn.style.background =
+            "linear-gradient(45deg, #28a745, #20c997)";
+
+          setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.background =
+              "linear-gradient(45deg, #40e0d0, #1e90ff)";
+          }, 3000);
+        });
     </script>
   </body>
 </html>
