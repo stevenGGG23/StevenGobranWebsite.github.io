@@ -401,17 +401,34 @@
       <h2>Contact Me</h2>
       <div class="contact-form">
         <div class="glass-card">
-          <form>
+          <form id="contact-form">
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required
+              />
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Your Email" required />
+              <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                required
+              />
             </div>
             <div class="form-group">
-              <textarea rows="5" placeholder="Your Message" required></textarea>
+              <textarea
+                rows="5"
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
             </div>
-            <button type="submit" class="cta-button">Send Message</button>
+            <button type="submit" class="cta-button" id="submit-btn">
+              Send Message
+            </button>
           </form>
         </div>
         <div class="glass-card" style="margin-top: 30px; text-align: center">
