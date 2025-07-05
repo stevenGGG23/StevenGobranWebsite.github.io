@@ -192,7 +192,7 @@
                 Present</strong
               >
             </p>
-            <div class="experience-image-container">
+            <div class="silicon-ranch-container">
               <img
                 src="Silicon.png"
                 alt="Silicon Ranch Corporation"
@@ -446,6 +446,37 @@
       </div>
     </section>
 
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+      <div class="fab-main" id="fabMain">
+        <span class="fab-icon">+</span>
+      </div>
+      <div class="fab-options" id="fabOptions">
+        <a href="#contact" class="fab-option" title="Contact Me">
+          <span>✉</span>
+        </a>
+        <a
+          href="https://docs.google.com/document/d/1gPSnfLrU2H_RIdsvKoKjxs60gXI7aivxZBYRuYEdvkI/edit?usp=sharing"
+          target="_blank"
+          class="fab-option"
+          title="Download Resume"
+        >
+          <span>📄</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/steven-gobran-17a1a4291/"
+          target="_blank"
+          class="fab-option"
+          title="LinkedIn"
+        >
+          <span>💼</span>
+        </a>
+        <a href="#home" class="fab-option" title="Back to Top">
+          <span>⬆</span>
+        </a>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 Steven Gobran</p>
@@ -562,9 +593,40 @@
       style.textContent = `@keyframes cursorFade{0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0);}}`;
       document.head.appendChild(style);
 
-      // Initialize EmailJS (You'll need to replace these with your actual EmailJS credentials)
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      // Floating Action Button
+      const fabMain = document.getElementById("fabMain");
+      const fabOptions = document.getElementById("fabOptions");
+      let fabOpen = false;
 
+      fabMain.addEventListener("click", () => {
+        fabOpen = !fabOpen;
+        if (fabOpen) {
+          fabOptions.classList.add("open");
+          fabMain.querySelector(".fab-icon").style.transform = "rotate(45deg)";
+        } else {
+          fabOptions.classList.remove("open");
+          fabMain.querySelector(".fab-icon").style.transform = "rotate(0deg)";
+        }
+      });
+
+      // Close FAB when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".fab-container") && fabOpen) {
+          fabOptions.classList.remove("open");
+          fabMain.querySelector(".fab-icon").style.transform = "rotate(0deg)";
+          fabOpen = false;
+        }
+      });
+
+      // Add scroll-to-top functionality with smooth animation
+      document.querySelectorAll('a[href="#home"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      // Initialize EmailJS - Using FormSubmit as a reliable alternative
       // Form submission
       document
         .getElementById("contact-form")
@@ -576,24 +638,62 @@
           submitBtn.textContent = "Sending...";
           submitBtn.disabled = true;
 
-          // For now, we'll use a fallback method since EmailJS needs setup
-          // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values from EmailJS
-
-          // Temporary fallback - opens email client
           const formData = new FormData(this);
           const name = formData.get("from_name");
           const email = formData.get("from_email");
           const message = formData.get("message");
 
-          const subject = `Portfolio Contact from ${name}`;
-          const body = `Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
-          const mailtoLink = `mailto:stevengobran@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+          // Create a hidden form for FormSubmit service
+          const tempForm = document.createElement("form");
+          tempForm.action = "https://formsubmit.co/stevengobran@gmail.com";
+          tempForm.method = "POST";
+          tempForm.style.display = "none";
 
-          window.location.href = mailtoLink;
+          // Add form fields
+          const nameField = document.createElement("input");
+          nameField.type = "hidden";
+          nameField.name = "name";
+          nameField.value = name;
+          tempForm.appendChild(nameField);
 
-          // Reset form and button
+          const emailField = document.createElement("input");
+          emailField.type = "hidden";
+          emailField.name = "email";
+          emailField.value = email;
+          tempForm.appendChild(emailField);
+
+          const messageField = document.createElement("input");
+          messageField.type = "hidden";
+          messageField.name = "message";
+          messageField.value = message;
+          tempForm.appendChild(messageField);
+
+          // Add FormSubmit configuration
+          const subjectField = document.createElement("input");
+          subjectField.type = "hidden";
+          subjectField.name = "_subject";
+          subjectField.value = `Portfolio Contact from ${name}`;
+          tempForm.appendChild(subjectField);
+
+          const nextField = document.createElement("input");
+          nextField.type = "hidden";
+          nextField.name = "_next";
+          nextField.value = window.location.href;
+          tempForm.appendChild(nextField);
+
+          const captchaField = document.createElement("input");
+          captchaField.type = "hidden";
+          captchaField.name = "_captcha";
+          captchaField.value = "false";
+          tempForm.appendChild(captchaField);
+
+          // Submit the form
+          document.body.appendChild(tempForm);
+          tempForm.submit();
+
+          // Clean up
           this.reset();
-          submitBtn.textContent = "Email Client Opened";
+          submitBtn.textContent = "Message Sent!";
           submitBtn.style.background =
             "linear-gradient(45deg, #28a745, #20c997)";
 
