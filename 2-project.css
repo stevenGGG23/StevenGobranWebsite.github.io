@@ -470,23 +470,76 @@ nav a.active {
     width: 0%;
     height: 4px;
     background: linear-gradient(to right, #40e0d0, #1e90ff);
-    z- 
+    z-
 
-    /* === Certifications – Badge Style === */
-.certification-badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(64, 224, 208, 0.2);
-    padding: 10px 20px;
-    border-radius: 50px;
-    margin: 10px;
+/* Certifications Grid */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.certification-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(64, 224, 208, 0.2);
+    border-color: rgba(64, 224, 208, 0.3);
+}
+
+.certification-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.certification-content h3 {
     color: #40e0d0;
-    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.certification-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.certification-image-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.certification-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.certification-badge:hover {
+
+.certification-image:hover {
     transform: scale(1.05);
-    background: rgba(64, 224, 208, 0.1);
+}
+
+.certification-document {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Experience Image Container */
+.experience-image-container {
+    margin: 20px 0;
+    text-align: center;
 }
 
 /* === Section Header Accent === */
