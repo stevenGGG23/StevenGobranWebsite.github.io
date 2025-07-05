@@ -470,4 +470,32 @@ nav a.active {
     width: 0%;
     height: 4px;
     background: linear-gradient(to right, #40e0d0, #1e90ff);
-    z-
+    z- 
+
+    /* === Certifications – Badge Style === */
+.certification-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(64, 224, 208, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 10px;
+    color: #40e0d0;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+.certification-badge:hover {
+    transform: scale(1.05);
+    background: rgba(64, 224, 208, 0.1);
+}
+
+/* === Section Header Accent === */
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, #40e0d0, #1e90ff);
+    border-radius: 2px;
+}
