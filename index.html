@@ -656,6 +656,62 @@
               "linear-gradient(45deg, #40e0d0, #1e90ff)";
           }, 3000);
         });
+
+      // Education section interactivity
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabPanels = document.querySelectorAll(".tab-panel");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetTab = button.dataset.tab;
+
+          // Remove active class from all buttons and panels
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabPanels.forEach((panel) => panel.classList.remove("active"));
+
+          // Add active class to clicked button and corresponding panel
+          button.classList.add("active");
+          document.getElementById(targetTab).classList.add("active");
+        });
+      });
+
+      // Animate stats on scroll
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const gpaNumber = entry.target.querySelector(".stat-number");
+              if (gpaNumber && gpaNumber.textContent === "4.0") {
+                animateGPA(gpaNumber);
+              }
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+
+      const educationStats = document.querySelector(".education-stats");
+      if (educationStats) {
+        statsObserver.observe(educationStats);
+      }
+
+      function animateGPA(element) {
+        let current = 0;
+        const target = 4.0;
+        const increment = 0.1;
+        const duration = 2000;
+        const stepTime = duration / (target / increment);
+
+        const timer = setInterval(() => {
+          current += increment;
+          element.textContent = current.toFixed(1);
+
+          if (current >= target) {
+            element.textContent = "4.0";
+            clearInterval(timer);
+          }
+        }, stepTime);
+      }
     </script>
   </body>
 </html>
