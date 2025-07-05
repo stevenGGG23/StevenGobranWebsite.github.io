@@ -628,87 +628,6 @@ nav a.active {
   border-radius: 2px;
 }
 
-/* Floating Action Button */
-.fab-container {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1000;
-}
-
-.fab-main {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(45deg, #40e0d0, #1e90ff);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(64, 224, 208, 0.4);
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 1001;
-}
-
-.fab-main:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(64, 224, 208, 0.6);
-}
-
-.fab-icon {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.fab-options {
-  position: absolute;
-  bottom: 80px;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-.fab-options.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-}
-
-.fab-option {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  transition: all 0.3s ease;
-  transform: scale(0.8);
-}
-
-.fab-options.open .fab-option {
-  transform: scale(1);
-}
-
-.fab-option:hover {
-  background: rgba(64, 224, 208, 0.3);
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(64, 224, 208, 0.3);
-}
-
 /* Enhanced Timeline for Mobile */
 @media (max-width: 768px) {
   .timeline::before {
@@ -723,20 +642,6 @@ nav a.active {
 
   .timeline-dot {
     left: 20px;
-  }
-
-  .fab-container {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .fab-main {
-    width: 50px;
-    height: 50px;
-  }
-
-  .fab-icon {
-    font-size: 20px;
   }
 }
 

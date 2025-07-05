@@ -124,8 +124,8 @@
           <h3>Soft Skills</h3>
           <p>
             Analytical thinker, strong problem‑solving abilities, effective
-            communicator, detail‑oriented, adaptable, proactive learner, skilled
-            in time management, teamwork &amp; collaboration
+            communicator, detail���oriented, adaptable, proactive learner,
+            skilled in time management, teamwork &amp; collaboration
           </p>
         </div>
       </div>
@@ -235,19 +235,27 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>University TA — Computer Science II</h3>
+            <h3>University TA — Computer Science��II</h3>
             <p>
               <strong
                 >MTSU | Murfreesboro, TN | January&nbsp;2025 –
                 May&nbsp;2025</strong
               >
             </p>
-            <p>
-              Tutored students in C++ (OOP, recursion, software‑engineering
-              principles). Led labs on stacks, queues, linked lists, trees, and
-              sorting; coached on debugging, memory management, and algorithmic
-              problem solving.
-            </p>
+            <ul>
+              <li>
+                Tutored students in C++ with a focus on object-oriented
+                programming, recursion, and software engineering principles.
+              </li>
+              <li>
+                Assisted in laboratory sessions to implement and analyze stacks,
+                queues, linked lists, trees, and sorting algorithms.
+              </li>
+              <li>
+                Guided students in debugging techniques, efficient memory
+                management, and practical problem-solving strategies.
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -265,31 +273,20 @@
             <div class="experience-image-container">
               <img src="icode.jpg" alt="iCode" class="experience-image" />
             </div>
-            <p>
-              Delivered advanced courses in HTML, CSS, Python, game development,
-              and robotics. Guided students through C++/Unreal Engine projects
-              to publish 3D games and crafted STEM curricula that fostered
-              critical thinking.
-            </p>
-          </div>
-        </div>
-
-        <!-- iOS Development Intern -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>iOS Development Intern</h3>
-            <p>
-              <strong
-                >B.G.C | Murfreesboro, TN | June&nbsp;2024 –
-                August&nbsp;2024</strong
-              >
-            </p>
-            <p>
-              Taught Swift/Xcode app development, game development, and robotics
-              to teens; assessed progress and developed a project to enhance
-              engagement in coding camps.
-            </p>
+            <ul>
+              <li>
+                Tutored students in C++ with a focus on object-oriented
+                programming, recursion, and software engineering principles.
+              </li>
+              <li>
+                Assisted in laboratory sessions to implement and analyze stacks,
+                queues, linked lists, trees, and sorting algorithms.
+              </li>
+              <li>
+                Guided students in debugging techniques, efficient memory
+                management, and practical problem-solving strategies.
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -446,37 +443,6 @@
       </div>
     </section>
 
-    <!-- Floating Action Button -->
-    <div class="fab-container">
-      <div class="fab-main" id="fabMain">
-        <span class="fab-icon">+</span>
-      </div>
-      <div class="fab-options" id="fabOptions">
-        <a href="#contact" class="fab-option" title="Contact Me">
-          <span>✉</span>
-        </a>
-        <a
-          href="https://docs.google.com/document/d/1gPSnfLrU2H_RIdsvKoKjxs60gXI7aivxZBYRuYEdvkI/edit?usp=sharing"
-          target="_blank"
-          class="fab-option"
-          title="Download Resume"
-        >
-          <span>📄</span>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/steven-gobran-17a1a4291/"
-          target="_blank"
-          class="fab-option"
-          title="LinkedIn"
-        >
-          <span>💼</span>
-        </a>
-        <a href="#home" class="fab-option" title="Back to Top">
-          <span>⬆</span>
-        </a>
-      </div>
-    </div>
-
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 Steven Gobran</p>
@@ -592,39 +558,6 @@
       const style = document.createElement("style");
       style.textContent = `@keyframes cursorFade{0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0);}}`;
       document.head.appendChild(style);
-
-      // Floating Action Button
-      const fabMain = document.getElementById("fabMain");
-      const fabOptions = document.getElementById("fabOptions");
-      let fabOpen = false;
-
-      fabMain.addEventListener("click", () => {
-        fabOpen = !fabOpen;
-        if (fabOpen) {
-          fabOptions.classList.add("open");
-          fabMain.querySelector(".fab-icon").style.transform = "rotate(45deg)";
-        } else {
-          fabOptions.classList.remove("open");
-          fabMain.querySelector(".fab-icon").style.transform = "rotate(0deg)";
-        }
-      });
-
-      // Close FAB when clicking outside
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".fab-container") && fabOpen) {
-          fabOptions.classList.remove("open");
-          fabMain.querySelector(".fab-icon").style.transform = "rotate(0deg)";
-          fabOpen = false;
-        }
-      });
-
-      // Add scroll-to-top functionality with smooth animation
-      document.querySelectorAll('a[href="#home"]').forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      });
 
       // Initialize EmailJS - Using FormSubmit as a reliable alternative
       // Form submission
