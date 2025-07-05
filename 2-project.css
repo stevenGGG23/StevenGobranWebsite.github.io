@@ -456,15 +456,16 @@ nav a.active {
 
 .experience-image {
   width: 100%;
-  max-width: 300px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
-  margin: 15px 0;
   transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .experience-image:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(64, 224, 208, 0.4);
 }
 
 /* Contact Form */
@@ -579,8 +580,23 @@ nav a.active {
 
 /* Experience Image Container */
 .experience-image-container {
-  margin: 20px 0;
-  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 80px;
+  margin: 0;
+}
+
+.timeline-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  padding-right: 160px; /* Add extra padding to make room for image */
+  transition: all 0.3s ease;
 }
 
 /* === Section Header Accent === */
