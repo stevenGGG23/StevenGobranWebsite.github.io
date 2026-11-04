@@ -1,0 +1,14 @@
+{
+  "name": "Steven Gobran",
+  "short_name": "Steven G.",
+  "description": "Portfolio of Steven Gobran: data, AI and software engineering.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a1624",
+  "theme_color": "#0a1624",
+  "icons": [
+    { "src": "assets/img/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/img/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
