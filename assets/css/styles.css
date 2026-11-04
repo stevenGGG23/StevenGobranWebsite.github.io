@@ -1476,17 +1476,14 @@ template { display: none; }
 .edu__badge {
   display: grid;
   place-items: center;
-  width: 46px; height: 46px;
+  width: 62px; height: 50px;
   flex: none;
+  padding: 7px;
   border-radius: 12px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: -0.04em;
+  border: 1px solid var(--line);
+  background: rgba(148, 180, 220, 0.07);
 }
+.edu__badge img { width: 100%; height: auto; }
 .edu__school { margin-top: 2px; font-size: 19px; letter-spacing: -0.01em; }
 .edu__degree { margin-top: 2px !important; font-size: 15px; }
 .edu__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
