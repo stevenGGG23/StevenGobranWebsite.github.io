@@ -1,727 +1,1186 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Steven Gobran - Portfolio</title>
-    <link rel="stylesheet" href="2-project.css" />
-  </head>
-  <body>
-    <div class="bg-animation"></div>
-    <div class="progress-bar" id="progressBar"></div>
-    <div id="particles"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Steven Gobran · Data Engineer</title>
+    <meta name="description" content="Steven Gobran is a Data Engineer / Specialist at Schneider Electric and a CS student at MTSU in Nashville. Projects, trading systems, research and videos." />
+    <meta name="author" content="Steven Gobran" />
+    <meta name="theme-color" content="#0a1624" />
+    <meta name="color-scheme" content="dark" />
 
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#certifications" class="nav-link">Certifications</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Steven Gobran · Data Engineer" />
+    <meta property="og:description" content="Data Engineer / Specialist at Schneider Electric · CS @ MTSU. I build data pipelines, AI tools, trading systems and full-stack apps." />
+    <meta property="og:image:alt" content="Dot-matrix portrait of Steven next to the words: hey, I'm Steven. I build data pipelines." />
+    <meta property="og:image" content="/assets/img/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <img src="project_pf.jpg" alt="Steven Gobran" class="profile-image" />
-        <h1>Steven Gobran</h1>
-        <p>
-          Computer Science Student |
-          <span class="typewriter" id="typewriter">Software Developer</span>
-        </p>
-        <a href="#projects" class="cta-button">View My Work</a>
-        <a
-          href="https://docs.google.com/document/d/1GwFlUr_XWLFH5UNDr_4TUE9XUQWVrmSgtnUZB_5uv38/edit?tab=t.0"
-          class="cta-button"
-          >Download Resume</a
-        >
-      </div>
-    </section>
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/img/icons/icon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div class="glass-card">
-        <p>
-          Hey! I'm Steven Gobran, a passionate Computer Science major with a
-          minor in Mathematics at MTSU. Originally from Egypt, I am a
-          first-generation college student driven by a love for technology,
-          problem-solving, and innovation.
-        </p>
-        <br />
-        <p>
-          With a strong foundation in software development, full-stack web
-          design, game development, and automation, I thrive on building
-          efficient, scalable, and impactful applications. I have experience
-          working with multiple programming languages, frameworks, and
-          development tools, allowing me to craft solutions that bridge
-          creativity and functionality.
-        </p>
-      </div>
-    </section>
+    <script>document.documentElement.classList.remove("no-js")</script>
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/img/hero-map.png" as="image" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=2026-11-04" />
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <div class="glass-card">
-        <h3>Middle Tennessee State University (Murfreesboro, TN)</h3>
-        <p>
-          <strong>B.S. in Computer Science; Minor in Mathematics | August 2023 – December 2026</strong>
-        </p>
-
-          <div class="education-stats">
-            <div class="stat-item highlight-stat">
-              <div class="stat-number">4.0</div>
-              <div class="stat-label">GPA</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🏆</div>
-              <div class="stat-label">Honors Program</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🎓</div>
-              <div class="stat-label">First-Gen Student</div>
-            </div>
-          </div>
-
-
-        <ul style="margin-top: 20px; line-height: 1.8">
-          <li>
-            Relevant Coursework: Programming I-II, Computer Systems, Computer
-            Organization, Data Structures & Algorithms, Programming Languages,
-            Calculus I-II, Discrete Mathematics, Probability & Statistics, Data
-            Analysis
-          </li>
-        </ul>
-        <div class="fitflow-img-container">
-          <img class="fitflow-img" src="MTSU.jpg" alt="MTSU Image" />
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <h3>Programming Languages</h3>
-          <p>Python, C++, SQL, MySQL, CSS, Swift, HTML</p>
-        </div>
-        <div class="skill-item">
-          <h3>Technologies &amp; Frameworks</h3>
-          <p>
-            Android Studio, Visual Studio, Unreal Engine, Xcode, Git &amp;
-            GitHub, Pandas, SEEQ, GPM Plus
-          </p>
-        </div>
-        <div class="skill-item">
-          <h3>Operating Systems</h3>
-          <p>Windows, macOS</p>
-        </div>
-        <div class="skill-item">
-          <h3>Databases</h3>
-          <p>MySQL, SQL, Microsoft Access</p>
-        </div>
-        <div class="skill-item">
-          <h3>Software &amp; Tools</h3>
-          <p>Microsoft Word, Excel, PowerPoint, Power BI</p>
-        </div>
-        <div class="skill-item">
-          <h3>Soft Skills</h3>
-          <p>
-            Analytical thinker, strong problem‑solving abilities, effective
-            communicator, detail-oriented, adaptable, proactive learner, skilled
-            in time management, and experienced in teamwork and collaboration.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-      <h2>Certifications</h2>
-      <div class="certifications-grid">
-        <div class="certification-card">
-          <div class="certification-content">
-            <h3>SEEQ Data Analytics Certification</h3>
-            <p><strong>Issued 2025</strong></p>
-            <div class="certification-image-container">
-              <embed
-                src="SEEQ.pdf"
-                type="application/pdf"
-                class="certification-document"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="certification-card">
-          <div class="certification-content">
-            <h3>Data Analytics Certification</h3>
-            <p><strong>Issued 2025</strong></p>
-            <div class="certification-image-container">
-              <img
-                src="Certificate.jpg"
-                alt="Data Analytics Certification"
-                class="certification-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="certification-card">
-          <div class="certification-content">
-            <h3>OSHA Certification</h3>
-            <p><strong>Issued 2021</strong></p>
-            <div class="certification-image-container">
-              <embed
-                src="OSHA.pdf"
-                type="application/pdf"
-                class="certification-document"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <h2>Work Experience</h2>
-      <div class="timeline">
-        <!-- Performance Engineer Intern -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Performance Engineer Intern</h3>
-            <p>
-              <strong
-                >Silicon Ranch Corporation | Nashville, TN | June&nbsp;2025 –
-                Present</strong
-              >
-            </p>
-            <div class="silicon-ranch-container">
-              <img
-                src="Silicon.png"
-                alt="Silicon Ranch Corporation"
-                class="experience-image"
-              />
-            </div>
-            <ul>
-              <li>
-                Analyzed solar plant performance across hundreds of global sites
-                and millions of modules, identifying underperformance using GPM
-                Plus, SEEQ Data Labs, and Jupyter Notebook.
-              </li>
-              <li>
-                Created weekly reports on energy loss, inverter health, and
-                solar module site maintenance needs.
-              </li>
-              <li>
-                Developed a Python program integrating SEEQ Data Lab, Pandas,
-                and Matplotlib to extract and visualize solar soiling data
-                spanning 11+ years with 5-minute intervals (600,000+ data points
-                per site).
-              </li>
-              <li>
-                Built a user-friendly command-line interface to prompt for site
-                name and date range, automate API-based data pulls, and shorten
-                compile times through efficient data caching, reducing data
-                extraction time by 33%.
-              </li>
-              <li>
-                Implemented clear-sky day detection by comparing actual vs.
-                modeled sunlight, normalized current data, and generated
-                interactive box plots and trend line graphs to quantify
-                performance loss due to soiling.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- University TA -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>University TA — Computer Science��II</h3>
-            <p>
-              <strong
-                >MTSU | Murfreesboro, TN | January&nbsp;2025 –
-                May&nbsp;2025</strong
-              >
-            </p>
-            <ul>
-              <li>
-                Tutored students in C++ with a focus on object-oriented
-                programming, recursion, and software engineering principles.
-              </li>
-              <li>
-                Assisted in laboratory sessions to implement and analyze stacks,
-                queues, linked lists, trees, and sorting algorithms.
-              </li>
-              <li>
-                Guided students in debugging techniques, efficient memory
-                management, and practical problem-solving strategies.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Technical Instructor -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Technical Instructor</h3>
-            <p>
-              <strong
-                >iCode | Franklin, TN | November&nbsp;2024 –
-                March&nbsp;2025</strong
-              >
-            </p>
-            <div class="experience-image-container">
-              <img src="icode.jpg" alt="iCode" class="experience-image" />
-            </div>
-            <ul>
-              <li>
-                Tutored students in C++ with a focus on object-oriented
-                programming, recursion, and software engineering principles.
-              </li>
-              <li>
-                Assisted in laboratory sessions to implement and analyze stacks,
-                queues, linked lists, trees, and sorting algorithms.
-              </li>
-              <li>
-                Guided students in debugging techniques, efficient memory
-                management, and practical problem-solving strategies.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Co‑Founder -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Co‑Founder &amp; Manager</h3>
-            <p>
-              <strong
-                >Harmony Landscape Start‑Up | May&nbsp;2021 –
-                July&nbsp;2023</strong
-              >
-            </p>
-            <ul>
-              <li>
-                Co‑founded and managed daily operations, staff, and project
-                execution for a growing landscaping business.
-              </li>
-              <li>
-                Developed leadership and organizational skills through hands-on
-                business management experience.
-              </li>
-              <li>
-                Successfully coordinated multiple landscaping projects while
-                building a strong client base.
-              </li>
-            </ul>
-            <p>
-              <a
-                href="https://www.instagram.com/harmony_landscaping/"
-                target="_blank"
-                style="color: #40e0d0; text-decoration: none"
-                >Instagram →</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-card-content">
-            <h3>Hospital Wait Time Analyzer (C++)</h3>
-            <p>
-              Processes up to 500k patient records to compute average wait
-              times, rank hospitals, and tally patient counts, enabling
-              data‑driven staffing decisions. Optimized for scalability and
-              performance.
-            </p>
-            <a
-              href="https://github.com/stevenGGG23"
-              target="_blank"
-              style="color: #40e0d0; text-decoration: none"
-              >GitHub →</a
-            >
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-content">
-            <h3>Email Extraction &amp; Validation (Python)</h3>
-            <p>
-              Automates extraction and validation of email addresses from text
-              files using regex, logging invalid entries and exporting clean
-              results for further analysis.
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-content">
-            <h3>Data Analysis Career Survey (Excel / SQL / Power BI)</h3>
-            <p>
-              Analyzed 630 survey responses, cleaned data in Excel, queried
-              insights with SQL, and built an interactive Power BI dashboard on
-              role difficulty, salary trends, pay satisfaction, age
-              distribution, and top languages.
-            </p>
-          </div>
-        </div>
-        <!-- Existing projects retained -->
-        <div class="project-card">
-          <div class="project-card-content">
-            <h3>Fit Flow App</h3>
-            <div class="fitflow-img-container">
-              <img
-                class="fitflow-img"
-                src="FitFlow.jpg"
-                alt="Fit Flow App Image"
-              />
-            </div>
-            <p>
-              Full‑stack gym calendar app built with React.js, Node.js & Java,
-              featuring a coin‑flip workout selector and dynamic muscle‑balance
-              tracking.
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-content">
-            <h3>Aimbot Precision Trainer (Python/Pygame)</h3>
-            <p>
-              Interactive aim‑training game that generates random targets and
-              tracks accuracy, demonstrating OOP design and real‑time collision
-              detection.
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-content">
-            <h3>Banking System (C++)</h3>
-            <p>
-              Menu‑driven system supporting deposits, withdrawals, and balance
-              checks with robust validation and modular OOP architecture.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <div class="contact-form">
-        <div class="glass-card">
-          <form id="contact-form">
-            <div class="form-group">
-              <input
-                type="text"
-                name="from_name"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                name="from_email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                rows="5"
-                name="message"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="cta-button" id="submit-btn">
-              Send Message
-            </button>
-          </form>
-        </div>
-        <div class="glass-card" style="margin-top: 30px; text-align: center">
-          <p><strong>Email:</strong> stevengobran@gmail.com</p>
-          <p><strong>Phone:</strong> (615) 336-7310</p>
-          <p>
-            <a
-              href="https://www.linkedin.com/in/steven-gobran-17a1a4291/"
-              target="_blank"
-              style="color: #40e0d0; text-decoration: none"
-              >LinkedIn →</a
-            >
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Steven Gobran</p>
-    </footer>
-
-    <!-- EmailJS Script -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-
-    <!-- Scripts -->
-    <script>
-      // Typewriter Effect
-      const typewriter = document.getElementById("typewriter");
-      const words = [
-        "Software Developer",
-        "Tech Enthusiast",
-        "Problem Solver",
-        "Innovation Seeker",
-      ];
-      let wordIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function type() {
-        const currentWord = words[wordIndex];
-        if (isDeleting) {
-          typewriter.textContent = currentWord.substring(0, charIndex - 1);
-          charIndex--;
-        } else {
-          typewriter.textContent = currentWord.substring(0, charIndex + 1);
-          charIndex++;
-        }
-        if (!isDeleting && charIndex === currentWord.length) {
-          setTimeout(() => (isDeleting = true), 1500);
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-        }
-        setTimeout(type, isDeleting ? 50 : 100);
-      }
-      type();
-
-      // Scroll Progress Bar
-      window.addEventListener("scroll", () => {
-        const scrolled =
-          (window.scrollY /
-            (document.documentElement.scrollHeight - window.innerHeight)) *
-          100;
-        document.getElementById("progressBar").style.width = scrolled + "%";
-      });
-
-      // Intersection Observer for Animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document
-        .querySelectorAll(".section")
-        .forEach((section) => observer.observe(section));
-
-      // Smooth Scrolling
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-            document
-              .querySelectorAll(".nav-link")
-              .forEach((link) => link.classList.remove("active"));
-            this.classList.add("active");
-          }
-        });
-      });
-
-      // Particle System
-      function createParticle() {
-        const particle = document.createElement("div");
-        particle.className = "particle";
-        particle.style.left = Math.random() * 100 + "%";
-        particle.style.animationDelay = Math.random() * 15 + "s";
-        particle.style.animationDuration = Math.random() * 10 + 10 + "s";
-        document.getElementById("particles").appendChild(particle);
-        setTimeout(() => particle.remove(), 15000);
-      }
-      setInterval(createParticle, 500);
-      for (let i = 0; i < 10; i++) setTimeout(createParticle, i * 100);
-
-      // Interactive cursor effect
-      document.addEventListener("mousemove", (e) => {
-        const cursor = document.createElement("div");
-        cursor.style.position = "fixed";
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-        cursor.style.width = "4px";
-        cursor.style.height = "4px";
-        cursor.style.background = "rgba(64,224,208,0.6)";
-        cursor.style.borderRadius = "50%";
-        cursor.style.pointerEvents = "none";
-        cursor.style.zIndex = "9999";
-        cursor.style.animation = "cursorFade 1s ease-out forwards";
-        document.body.appendChild(cursor);
-        setTimeout(() => cursor.remove(), 1000);
-      });
-      const style = document.createElement("style");
-      style.textContent = `@keyframes cursorFade{0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0);}}`;
-      document.head.appendChild(style);
-
-      // Initialize EmailJS - Using FormSubmit as a reliable alternative
-      // Form submission
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const submitBtn = document.getElementById("submit-btn");
-          const originalText = submitBtn.textContent;
-          submitBtn.textContent = "Sending...";
-          submitBtn.disabled = true;
-
-          const formData = new FormData(this);
-          const name = formData.get("from_name");
-          const email = formData.get("from_email");
-          const message = formData.get("message");
-
-          // Create a hidden form for FormSubmit service
-          const tempForm = document.createElement("form");
-          tempForm.action = "https://formsubmit.co/stevengobran@gmail.com";
-          tempForm.method = "POST";
-          tempForm.style.display = "none";
-
-          // Add form fields
-          const nameField = document.createElement("input");
-          nameField.type = "hidden";
-          nameField.name = "name";
-          nameField.value = name;
-          tempForm.appendChild(nameField);
-
-          const emailField = document.createElement("input");
-          emailField.type = "hidden";
-          emailField.name = "email";
-          emailField.value = email;
-          tempForm.appendChild(emailField);
-
-          const messageField = document.createElement("input");
-          messageField.type = "hidden";
-          messageField.name = "message";
-          messageField.value = message;
-          tempForm.appendChild(messageField);
-
-          // Add FormSubmit configuration
-          const subjectField = document.createElement("input");
-          subjectField.type = "hidden";
-          subjectField.name = "_subject";
-          subjectField.value = `Portfolio Contact from ${name}`;
-          tempForm.appendChild(subjectField);
-
-          const nextField = document.createElement("input");
-          nextField.type = "hidden";
-          nextField.name = "_next";
-          nextField.value = window.location.href;
-          tempForm.appendChild(nextField);
-
-          const captchaField = document.createElement("input");
-          captchaField.type = "hidden";
-          captchaField.name = "_captcha";
-          captchaField.value = "false";
-          tempForm.appendChild(captchaField);
-
-          // Submit the form
-          document.body.appendChild(tempForm);
-          tempForm.submit();
-
-          // Clean up
-          this.reset();
-          submitBtn.textContent = "Message Sent!";
-          submitBtn.style.background =
-            "linear-gradient(45deg, #28a745, #20c997)";
-
-          setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.background =
-              "linear-gradient(45deg, #40e0d0, #1e90ff)";
-          }, 3000);
-        });
-
-      // Education section interactivity
-      const tabButtons = document.querySelectorAll(".tab-button");
-      const tabPanels = document.querySelectorAll(".tab-panel");
-
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const targetTab = button.dataset.tab;
-
-          // Remove active class from all buttons and panels
-          tabButtons.forEach((btn) => btn.classList.remove("active"));
-          tabPanels.forEach((panel) => panel.classList.remove("active"));
-
-          // Add active class to clicked button and corresponding panel
-          button.classList.add("active");
-          document.getElementById(targetTab).classList.add("active");
-        });
-      });
-
-      // Animate stats on scroll
-      const statsObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const gpaNumber = entry.target.querySelector(".stat-number");
-              if (gpaNumber && gpaNumber.textContent === "4.0") {
-                animateGPA(gpaNumber);
-              }
-            }
-          });
-        },
-        { threshold: 0.5 },
-      );
-
-      const educationStats = document.querySelector(".education-stats");
-      if (educationStats) {
-        statsObserver.observe(educationStats);
-      }
-
-      function animateGPA(element) {
-        let current = 0;
-        const target = 4.0;
-        const increment = 0.1;
-        const duration = 2000;
-        const stepTime = duration / (target / increment);
-
-        const timer = setInterval(() => {
-          current += increment;
-          element.textContent = current.toFixed(1);
-
-          if (current >= target) {
-            element.textContent = "4.0";
-            clearInterval(timer);
-          }
-        }, stepTime);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Steven Gobran",
+        "jobTitle": "Data Engineer / Specialist",
+        "worksFor": { "@type": "Organization", "name": "Schneider Electric" },
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Middle Tennessee State University" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Nashville", "addressRegion": "TN" },
+        "email": "mailto:stevengobran@gmail.com",
+        "sameAs": [
+          "https://github.com/stevenGGG23",
+          "https://www.linkedin.com/in/steven-gobran-17a1a4291/",
+          "https://www.youtube.com/@StevenGG488"
+        ]
       }
     </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></g></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M3 7.5A2.5 2.5 0 0 1 5.5 5h3.6l2.2 2.2h7.2A2.5 2.5 0 0 1 21 9.7v7.8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5Z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></g></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></g></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></g></symbol>
+      <symbol id="i-diagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="5" rx="1.2"/><rect x="14" y="16" width="7" height="5" rx="1.2"/><rect x="14" y="3" width="7" height="5" rx="1.2"/><path d="M6.5 8v5.5a2 2 0 0 0 2 2H14M10 5.5h4"/></g></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6.5" y="5" width="3.6" height="14" rx="1"/><rect x="13.9" y="5" width="3.6" height="14" rx="1"/></g></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></g></symbol>
+    </svg>
+
+    <!-- Navigation -->
+    <header class="nav" id="top">
+      <div class="container nav__inner">
+        <a class="nav__logo" href="#top" aria-label="Steven Gobran, back to top">
+          <span>Steven Gobran</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#trading">Trading</a>
+          <a href="#research">Research</a>
+          <a href="#videos">Videos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav__right">
+          <a class="icon-link icon-link--hide-md" href="mailto:stevengobran@gmail.com" aria-label="Email Steven"><svg class="icon"><use href="#i-mail" /></svg></a>
+          <a class="icon-link" href="https://github.com/stevenGGG23" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github" /></svg></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/steven-gobran-17a1a4291/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a>
+          <a class="icon-link icon-link--hide-md" href="https://www.youtube.com/@StevenGG488" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-youtube" /></svg></a>
+          <a class="btn btn--sm" href="assets/Steven_Gobran_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav aria-label="Mobile">
+        <ol>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#trading">Trading</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+      <div class="mobile-menu__social">
+        <a class="btn" href="assets/Steven_Gobran_Resume.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-file" /></svg>Resume</a>
+        <a class="icon-link" href="mailto:stevengobran@gmail.com" aria-label="Email Steven"><svg class="icon"><use href="#i-mail" /></svg></a>
+        <a class="icon-link" href="https://github.com/stevenGGG23" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github" /></svg></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/steven-gobran-17a1a4291/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a>
+        <a class="icon-link" href="https://www.youtube.com/@StevenGG488" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-youtube" /></svg></a>
+      </div>
+      <button class="btn btn--ghost mobile-menu__game" type="button" data-game-toggle>Play game mode</button>
+    </div>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__art" data-enter="1">
+            <canvas id="portrait-canvas" data-src="assets/img/hero-map.png" role="img" aria-label="Dot-matrix portrait of Steven holding a camera"></canvas>
+            <noscript><img src="assets/img/steven-camera.webp" alt="Steven holding a camera" width="900" height="874" /></noscript>
+            <span class="hero__art-hint" aria-hidden="true">move your cursor · click for a ripple</span>
+          </div>
+
+          <div class="hero__copy">
+            <p class="status-pill" data-enter="1"><span class="dot" aria-hidden="true"></span>Currently @ Schneider Electric<span class="status-pill__loc"> · Nashville, TN</span></p>
+            <h1 class="hero__title" id="hero-title" data-enter="2">hey, i'm <span class="accent">steven</span>.</h1>
+            <p class="hero__role" data-enter="3">
+              <span class="sr-only">I build data pipelines, AI-powered tools, full-stack apps and systems in C and C++.</span>
+              <span aria-hidden="true">I build <span class="typed" id="typed" data-words="data pipelines.|AI-powered tools.|full-stack apps.|systems in C &amp; C++.">data pipelines.</span><span class="caret"></span></span>
+            </p>
+            <p class="hero__bio" data-enter="4">
+              Data Engineer / Specialist at Schneider Electric and Computer Science student at MTSU. I turn messy data into
+              reliable pipelines, models and products, from Databricks lakehouses to
+              <a class="accent" href="#projects">GradPath</a>, a degree planner that covers all 223 MTSU majors and concentrations.
+            </p>
+            <div class="hero__cta" data-enter="5">
+              <a class="btn" href="mailto:stevengobran@gmail.com"><svg class="icon"><use href="#i-mail" /></svg>Say hi</a>
+              <a class="btn btn--ghost" href="assets/Steven_Gobran_Resume.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-file" /></svg>View resume</a>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About">scroll</a>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <h2 class="section-title reveal" id="about-title"><span class="path">~/</span>about me</h2>
+          <div class="about__grid">
+            <div class="about__text reveal">
+              <p>
+                I'm a <span class="strong">Computer Science</span> student in the Honors program at
+                <span class="strong">Middle Tennessee State University</span>, minoring in Data Science and Mathematics and
+                graduating in December 2026. I'm originally from Egypt and the first in my family to go to college.
+              </p>
+              <p>
+                These days I work where data and AI meet. As a Data Engineer / Specialist at
+                <a class="inline" href="https://www.se.com/" target="_blank" rel="noopener">Schneider Electric</a> I build
+                Databricks pipelines over 1.3M+ Redshift order records. With
+                <a class="inline" href="https://joinhandshake.com/" target="_blank" rel="noopener">Handshake AI</a> I audit LLM
+                output on coding tasks, and before that I spent a summer building solar-performance pipelines at
+                <a class="inline" href="https://siliconranch.com/" target="_blank" rel="noopener">Silicon Ranch</a>.
+              </p>
+              <p>Here are some technologies I've been working with recently:</p>
+              <ul class="tech-list">
+                <li>Python</li>
+                <li>SQL &amp; Spark SQL</li>
+                <li>PySpark · Databricks</li>
+                <li>AWS (S3, Redshift)</li>
+                <li>C / C++</li>
+                <li>C# · .NET</li>
+                <li>TypeScript · Next.js</li>
+                <li>Tableau · Power BI</li>
+              </ul>
+              <div class="edu">
+                <div class="edu__top">
+                  <span class="edu__badge" aria-hidden="true">MT</span>
+                  <div>
+                    <p class="eyebrow">Education</p>
+                    <h3 class="edu__school">Middle Tennessee State University</h3>
+                    <p class="edu__degree">B.S. Computer Science · Minors in Data Science &amp; Mathematics</p>
+                  </div>
+                </div>
+                <ul class="edu__meta">
+                  <li>Honors Program</li>
+                  <li>GPA 3.71 / 4.00</li>
+                  <li>Expected Dec 2026</li>
+                  <li>Murfreesboro, TN</li>
+                </ul>
+                <p class="edu__courses">
+                  <span class="strong">Coursework:</span> Data Structures &amp; Algorithms, Computer Systems, Software
+                  Development, Database Management, Programming Languages, Data Science, Applied Predictive Modeling, Data
+                  Analysis, Feature Engineering, Calculus I–III
+                </p>
+              </div>
+            </div>
+            <figure class="portrait reveal">
+              <div class="portrait__frame">
+                <picture>
+                  <source srcset="assets/img/steven.webp" type="image/webp" />
+                  <img src="assets/img/steven.jpg" alt="Steven Gobran smiling, arms crossed, at a restaurant table" width="720" height="900" loading="lazy" />
+                </picture>
+              </div>
+              <figcaption>Nashville, TN</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience" aria-labelledby="exp-title">
+        <div class="container">
+          <h2 class="section-title reveal" id="exp-title"><span class="path">~/</span>experience</h2>
+          <div class="exp reveal">
+            <div class="exp__tabs" role="tablist" aria-label="Where I've worked" aria-orientation="vertical">
+              <span class="exp__indicator" aria-hidden="true"></span>
+              <button class="exp__tab" role="tab" id="tab-se" aria-controls="panel-se" aria-selected="true">Schneider Electric</button>
+              <button class="exp__tab" role="tab" id="tab-hs" aria-controls="panel-hs" aria-selected="false" tabindex="-1">Handshake AI</button>
+              <button class="exp__tab" role="tab" id="tab-cp" aria-controls="panel-cp" aria-selected="false" tabindex="-1">CodePath</button>
+              <button class="exp__tab" role="tab" id="tab-sr" aria-controls="panel-sr" aria-selected="false" tabindex="-1">Silicon Ranch</button>
+              <button class="exp__tab" role="tab" id="tab-ic" aria-controls="panel-ic" aria-selected="false" tabindex="-1">iCode</button>
+            </div>
+
+            <div class="exp__panels">
+              <div class="exp__panel" role="tabpanel" id="panel-se" aria-labelledby="tab-se" tabindex="0">
+                <h3 class="exp__role">Data Engineer / Specialist <span class="accent">@ <a href="https://www.se.com/" target="_blank" rel="noopener">Schneider Electric</a></span></h3>
+                <p class="exp__meta"><span>May 2026 – Present</span><span>Nashville, TN</span></p>
+                <p class="exp__note">Joined as a Transformation &amp; Analytics Intern, now a Data Engineer / Specialist.</p>
+                <ul class="bullets">
+                  <li>Built scheduled Databricks pipelines in PySpark and Spark SQL that enrich 1.3M+ Redshift order records, validating row counts and order value at every stage so nothing is duplicated downstream in Tableau.</li>
+                  <li>Built predictive Python pipelines that forecast headcount demand and utilization for a 100+ person CMO across 16 managers.</li>
+                  <li>Traced a 52K-record gap to an upstream status filter by querying <code>information_schema</code> across every warehouse schema, then moved eight fields upstream, which removed two joins and retired a redundant table.</li>
+                  <li>Engineering an SFTP-to-MES integration that runs every 30 minutes: Oracle CSV ingestion, SharePoint cross-reference enrichment, deduplication by window ranking, and automated alerts when operator mappings are missing.</li>
+                </ul>
+                <ul class="tags" aria-label="Tools used">
+                  <li class="tag">Databricks</li><li class="tag">PySpark</li><li class="tag">Spark SQL</li><li class="tag">Amazon Redshift</li><li class="tag">Tableau</li><li class="tag">Oracle</li>
+                </ul>
+              </div>
+
+              <div class="exp__panel" role="tabpanel" id="panel-hs" aria-labelledby="tab-hs" tabindex="0" hidden>
+                <h3 class="exp__role">AI Data Engineer (Contract) <span class="accent">@ <a href="https://joinhandshake.com/" target="_blank" rel="noopener">Handshake AI</a></span></h3>
+                <p class="exp__meta"><span>Apr 2026 – Present</span><span>Nashville, TN</span></p>
+                <ul class="bullets">
+                  <li>Evaluate, test and audit LLM output for correctness, reasoning quality and formatting across coding and analytical tasks, working with enterprise clients to train and improve models for software development.</li>
+                  <li>Run failure-mode analysis on AI-generated solutions and document recurring error patterns to improve model performance.</li>
+                  <li>Contribute to large JavaScript repositories using Git and Docker inside CI/CD pipelines that gate code quality with Jasmine, Jest, Mocha and Vitest before production.</li>
+                </ul>
+                <ul class="tags" aria-label="Tools used">
+                  <li class="tag">LLM evaluation</li><li class="tag">JavaScript</li><li class="tag">Docker</li><li class="tag">Jest</li><li class="tag">Vitest</li><li class="tag">CI/CD</li>
+                </ul>
+              </div>
+
+              <div class="exp__panel" role="tabpanel" id="panel-cp" aria-labelledby="tab-cp" tabindex="0" hidden>
+                <h3 class="exp__role">AI Engineering Fellow <span class="accent">@ <a href="https://www.codepath.org/" target="_blank" rel="noopener">CodePath</a></span></h3>
+                <p class="exp__meta"><span>Jan 2026 – Apr 2026</span><span>Nashville, TN</span></p>
+                <ul class="bullets">
+                  <li>Debugged and refactored Python systems using structured reasoning, systematic testing and Git-based version control, with a focus on correctness, maintainability and responsible AI-assisted development.</li>
+                  <li>Built ML evaluations, RAG pipelines and agentic workflows with guardrails, failure-mode analysis and risk-aware testing.</li>
+                </ul>
+                <ul class="tags" aria-label="Tools used">
+                  <li class="tag">Python</li><li class="tag">RAG</li><li class="tag">AI agents</li><li class="tag">ML evals</li><li class="tag">Git</li>
+                </ul>
+              </div>
+
+              <div class="exp__panel" role="tabpanel" id="panel-sr" aria-labelledby="tab-sr" tabindex="0" hidden>
+                <h3 class="exp__role">Data Engineering &amp; Performance Intern <span class="accent">@ <a href="https://siliconranch.com/" target="_blank" rel="noopener">Silicon Ranch</a></span></h3>
+                <p class="exp__meta"><span>Jun 2025 – Aug 2025</span><span>Nashville, TN</span></p>
+                <ul class="bullets">
+                  <li>Analyzed performance data across 100+ solar sites with GPM Plus, SEEQ Data Lab and Jupyter to report on energy loss, inverter health and maintenance trends.</li>
+                  <li>Built Python data pipelines and CLI tools (Pandas, Matplotlib, SEEQ API) to extract, process and visualize 11+ years of solar data (600K+ points per site), making processing 33% faster.</li>
+                  <li>Developed an automated monitoring system for 21 solar sites that detects inverter faults and overheating, with scheduled reports and alerts for the engineering team.</li>
+                </ul>
+                <ul class="tags" aria-label="Tools used">
+                  <li class="tag">Python</li><li class="tag">Pandas</li><li class="tag">Matplotlib</li><li class="tag">SEEQ</li><li class="tag">GPM Plus</li><li class="tag">Jupyter</li>
+                </ul>
+              </div>
+
+              <div class="exp__panel" role="tabpanel" id="panel-ic" aria-labelledby="tab-ic" tabindex="0" hidden>
+                <h3 class="exp__role">Technical Coding Instructor <span class="accent">@ <a href="https://www.icodeschool.com/" target="_blank" rel="noopener">iCode</a></span></h3>
+                <p class="exp__meta"><span>Nov 2024 – Mar 2025</span><span>Franklin, TN</span></p>
+                <ul class="bullets">
+                  <li>Taught advanced courses in Python, C++, robotics and Unreal Engine game development.</li>
+                  <li>Mentored students on software development fundamentals and how to debug their own projects.</li>
+                </ul>
+                <ul class="tags" aria-label="Topics taught">
+                  <li class="tag">Python</li><li class="tag">C++</li><li class="tag">Robotics</li><li class="tag">Unreal Engine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects" aria-labelledby="proj-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="proj-title"><span class="path">~/</span>projects</h2>
+            <a class="link-arrow" href="https://github.com/stevenGGG23?tab=repositories" target="_blank" rel="noopener">All repos on GitHub<svg class="icon"><use href="#i-arrow" /></svg></a>
+          </div>
+
+          <div class="spotlight-wrap reveal" role="region" aria-roledescription="carousel" aria-label="Featured projects">
+            <div class="spotlight">
+              <div class="spotlight__track">
+                <!--SLIDES:start-->
+                <article class="slide" id="slide-gradpath" aria-roledescription="slide" aria-label="1 of 6: MTSU GradPath">
+                  <a class="slide__media" href="https://mtsu-grad-path.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/gradpath-43.webp" alt="GradPath recommended plan: 36 of 120 credit hours complete, with a progress bar for each degree requirement" width="1200" height="900" loading="lazy" decoding="async" /></a>
+                  <div class="slide__body">
+                    <p class="eyebrow">Full-stack · data pipeline</p>
+                    <h3 class="slide__title">MTSU GradPath</h3>
+                    <p class="slide__desc">A degree planner for every MTSU undergraduate major, concentration and minor. Check off what you&#x27;ve taken and it builds a term-by-term plan to graduation that respects prerequisites, while a self-updating pipeline keeps the catalog data current.</p>
+                    <ul class="bullets slide__points"><li>223 majors and concentrations, 152 minors and 3,475 courses from the 2026–27 catalog</li><li>Started as a student team project; I wrote most of the code, including the rewrite from 8 hand-coded majors to all 223 programs</li></ul>
+                    <ul class="tags" aria-label="Built with"><li class="tag">Python</li><li class="tag">Flask</li><li class="tag">GitHub Actions</li><li class="tag">Mermaid.js</li><li class="tag">pytest</li><li class="tag">Vercel</li></ul>
+                    <div class="slide__links"><a class="btn btn--sm" href="https://mtsu-grad-path.vercel.app" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>Live site<span class="sr-only"> for MTSU GradPath</span></a><a class="btn btn--sm btn--ghost" href="https://github.com/stevenGGG23/MTSU-GradPath" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Code<span class="sr-only"> for MTSU GradPath</span></a><a class="btn btn--sm btn--ghost" href="#videos"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg>Demo video<span class="sr-only"> for MTSU GradPath</span></a><button class="btn btn--sm btn--ghost" type="button" data-arch="gradpath"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture<span class="sr-only"> of MTSU GradPath</span></button></div>
+                  </div>
+                </article>
+                <article class="slide" id="slide-propdesk" aria-roledescription="slide" aria-label="2 of 6: Prop Desk">
+                  <a class="slide__media" href="https://github.com/stevenGGG23/Prop-Desk" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/prop-desk-43.webp" alt="Prop Desk portfolio view with account cards showing balances, drawdown floors and risk ladders" width="1200" height="900" loading="lazy" decoding="async" /></a>
+                  <div class="slide__body">
+                    <p class="eyebrow">Risk analytics · full-stack</p>
+                    <h3 class="slide__title">Prop Desk</h3>
+                    <p class="slide__desc">A Flask and PostgreSQL dashboard for managing funded prop-firm futures accounts. Trades from my TradingView bot arrive by webhook, a risk engine works out how much drawdown room each account has left, and Monte Carlo simulations project the odds of passing and getting paid out.</p>
+                    <ul class="bullets slide__points"><li>20,000-run bootstrap Monte Carlo that replays every account on one shared trade sequence to capture correlated risk</li><li>Webhook ingestion routes TradingView/TradersPost events by account and dedupes retries by event ID</li></ul>
+                    <ul class="tags" aria-label="Built with"><li class="tag">Python</li><li class="tag">Flask</li><li class="tag">PostgreSQL</li><li class="tag">SQLAlchemy</li><li class="tag">NumPy</li><li class="tag">Chart.js</li></ul>
+                    <div class="slide__links"><a class="btn btn--sm btn--ghost" href="https://github.com/stevenGGG23/Prop-Desk" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Code<span class="sr-only"> for Prop Desk</span></a><button class="btn btn--sm btn--ghost" type="button" data-arch="propdesk"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture<span class="sr-only"> of Prop Desk</span></button></div>
+                  </div>
+                </article>
+                <article class="slide" id="slide-openbank" aria-roledescription="slide" aria-label="3 of 6: Open Bank">
+                  <a class="slide__media" href="https://github.com/stevenGGG23/Full-Stack-Banking-System-C-C-.NET-REST-API-WebSocket-" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/openbank-43.webp" alt="Open Bank dashboard showing a checking account balance, recent transactions and a transfer form" width="1200" height="900" loading="lazy" decoding="async" /></a>
+                  <div class="slide__body">
+                    <p class="eyebrow">Backend · distributed services</p>
+                    <h3 class="slide__title">Open Bank</h3>
+                    <p class="slide__desc">A multi-service banking platform. An ASP.NET Core API handles auth and PostgreSQL persistence, a separate C++17 microservice validates every transaction and computes its fee over REST before anything commits, and a SignalR hub pushes live balance updates to the dashboard.</p>
+                    <ul class="bullets slide__points"><li>Money moves inside PostgreSQL transactions with <code>SELECT … FOR UPDATE</code> row locks and an append-only ledger</li><li>JWT + bcrypt auth; account endpoints are scoped to the caller, admin routes re-check a role claim, and the WebSocket hub re-checks ownership</li></ul>
+                    <ul class="tags" aria-label="Built with"><li class="tag">C#</li><li class="tag">ASP.NET Core</li><li class="tag">C++17</li><li class="tag">PostgreSQL</li><li class="tag">SignalR</li><li class="tag">JWT</li></ul>
+                    <div class="slide__links"><a class="btn btn--sm btn--ghost" href="https://github.com/stevenGGG23/Full-Stack-Banking-System-C-C-.NET-REST-API-WebSocket-" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Code<span class="sr-only"> for Open Bank</span></a><button class="btn btn--sm btn--ghost" type="button" data-arch="openbank"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture<span class="sr-only"> of Open Bank</span></button></div>
+                  </div>
+                </article>
+                <article class="slide" id="slide-lakehouse" aria-roledescription="slide" aria-label="4 of 6: GSC NAM ETO Lakehouse">
+                  <div class="slide__media slide__media--diagram"><svg class="diagram diagram--wide" viewBox="0 0 680 400" role="img" aria-labelledby="lh-title lh-desc">
+  <title id="lh-title">Lakehouse pipeline diagram</title>
+  <desc id="lh-desc">Synthetic ETO orders are generated in Python and land in AWS S3, flow through Databricks bronze, silver and gold Delta tables, then load into Amazon Redshift via COPY for Tableau analytics.</desc>
+  <defs>
+    <marker id="lh-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#40e0d0"/>
+    </marker>
+    <linearGradient id="lh-node" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16304d"/>
+      <stop offset="1" stop-color="#10233a"/>
+    </linearGradient>
+  </defs>
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8193ac">
+    <!-- Source column -->
+    <rect x="20" y="86" width="160" height="68" rx="12" fill="url(#lh-node)" stroke="rgba(148,180,220,.28)"/>
+    <text x="36" y="110">01 · generate</text>
+    <text x="36" y="134" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="15" font-weight="600">ETO order data</text>
+    <rect x="20" y="246" width="160" height="68" rx="12" fill="url(#lh-node)" stroke="rgba(148,180,220,.28)"/>
+    <text x="36" y="270">02 · land</text>
+    <text x="36" y="294" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="15" font-weight="600">AWS S3</text>
+    <path d="M100 156 V242" stroke="#40e0d0" stroke-width="1.6" fill="none" marker-end="url(#lh-arrow)"/>
+
+    <!-- Databricks medallion -->
+    <rect x="214" y="30" width="252" height="340" rx="18" fill="rgba(64,224,208,.04)" stroke="#40e0d0" stroke-opacity=".55" stroke-dasharray="5 6"/>
+    <text x="236" y="60" fill="#40e0d0">databricks · delta lake</text>
+    <g font-family="'Space Grotesk', ui-sans-serif, sans-serif">
+      <rect x="236" y="80" width="208" height="70" rx="12" fill="url(#lh-node)" stroke="rgba(205,138,79,.6)"/>
+      <circle cx="256" cy="106" r="6" fill="#cd8a4f"/>
+      <text x="272" y="111" fill="#e3ecf8" font-size="15" font-weight="600">Bronze</text>
+      <text x="256" y="134" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10.5">raw ingest from S3</text>
+
+      <rect x="236" y="180" width="208" height="70" rx="12" fill="url(#lh-node)" stroke="rgba(184,196,214,.6)"/>
+      <circle cx="256" cy="206" r="6" fill="#b8c4d6"/>
+      <text x="272" y="211" fill="#e3ecf8" font-size="15" font-weight="600">Silver</text>
+      <text x="256" y="234" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10.5">refined · PySpark + SQL</text>
+
+      <rect x="236" y="280" width="208" height="70" rx="12" fill="url(#lh-node)" stroke="rgba(230,195,90,.65)"/>
+      <circle cx="256" cy="306" r="6" fill="#e6c35a"/>
+      <text x="272" y="311" fill="#e3ecf8" font-size="15" font-weight="600">Gold</text>
+      <text x="256" y="334" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10.5">analytics-ready tables</text>
+    </g>
+    <path d="M340 152 V176" stroke="#40e0d0" stroke-width="1.6" marker-end="url(#lh-arrow)"/>
+    <path d="M340 252 V276" stroke="#40e0d0" stroke-width="1.6" marker-end="url(#lh-arrow)"/>
+    <path d="M182 280 C 205 280, 205 115, 232 115" stroke="#40e0d0" stroke-width="1.6" fill="none" marker-end="url(#lh-arrow)"/>
+
+    <!-- Serving column -->
+    <rect x="500" y="150" width="160" height="68" rx="12" fill="url(#lh-node)" stroke="rgba(148,180,220,.28)"/>
+    <text x="516" y="174">03 · serve (COPY)</text>
+    <text x="516" y="198" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="15" font-weight="600">Amazon Redshift</text>
+    <rect x="500" y="282" width="160" height="68" rx="12" fill="url(#lh-node)" stroke="rgba(148,180,220,.28)"/>
+    <text x="516" y="306">04 · analyze</text>
+    <text x="516" y="330" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="15" font-weight="600">Tableau</text>
+    <path d="M446 315 C 475 315, 470 184, 496 184" stroke="#40e0d0" stroke-width="1.6" fill="none" marker-end="url(#lh-arrow)"/>
+    <path d="M580 220 V278" stroke="#40e0d0" stroke-width="1.6" marker-end="url(#lh-arrow)"/>
+  </g>
+</svg><svg class="diagram diagram--stack" viewBox="0 0 340 560" role="img" aria-labelledby="lhs-title">
+  <title id="lhs-title">Lakehouse pipeline: ETO order data lands in AWS S3, moves through Databricks bronze, silver and gold Delta tables, then loads into Amazon Redshift via COPY for Tableau.</title>
+  <defs>
+    <marker id="lhs-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#40e0d0"/>
+    </marker>
+  </defs>
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#8193ac">
+    <rect x="20" y="10" width="300" height="56" rx="12" fill="#16304d" stroke="rgba(148,180,220,.3)"/>
+    <text x="38" y="32">01 · generate</text>
+    <text x="38" y="54" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="16" font-weight="600">ETO order data · Python</text>
+    <path d="M170 68 V86" stroke="#40e0d0" stroke-width="1.8" marker-end="url(#lhs-arrow)"/>
+    <rect x="20" y="90" width="300" height="56" rx="12" fill="#16304d" stroke="rgba(148,180,220,.3)"/>
+    <text x="38" y="112">02 · land</text>
+    <text x="38" y="134" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="16" font-weight="600">AWS S3 raw zone</text>
+    <path d="M170 148 V166" stroke="#40e0d0" stroke-width="1.8" marker-end="url(#lhs-arrow)"/>
+    <rect x="10" y="170" width="320" height="230" rx="16" fill="rgba(64,224,208,.04)" stroke="#40e0d0" stroke-opacity=".55" stroke-dasharray="5 6"/>
+    <text x="28" y="194" fill="#40e0d0">databricks · delta lake</text>
+    <g font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="16" font-weight="600" fill="#e3ecf8">
+      <rect x="28" y="206" width="284" height="48" rx="10" fill="#16304d" stroke="rgba(205,138,79,.6)"/>
+      <circle cx="48" cy="230" r="6" fill="#cd8a4f"/><text x="64" y="236">Bronze</text>
+      <rect x="28" y="274" width="284" height="48" rx="10" fill="#16304d" stroke="rgba(184,196,214,.6)"/>
+      <circle cx="48" cy="298" r="6" fill="#b8c4d6"/><text x="64" y="304">Silver · PySpark + SQL</text>
+      <rect x="28" y="342" width="284" height="48" rx="10" fill="#16304d" stroke="rgba(230,195,90,.65)"/>
+      <circle cx="48" cy="366" r="6" fill="#e6c35a"/><text x="64" y="372">Gold · analytics-ready</text>
+    </g>
+    <path d="M170 256 V270" stroke="#40e0d0" stroke-width="1.8" marker-end="url(#lhs-arrow)"/>
+    <path d="M170 324 V338" stroke="#40e0d0" stroke-width="1.8" marker-end="url(#lhs-arrow)"/>
+    <path d="M170 402 V420" stroke="#40e0d0" stroke-width="1.8" marker-end="url(#lhs-arrow)"/>
+    <rect x="20" y="424" width="300" height="56" rx="12" fill="#16304d" stroke="rgba(148,180,220,.3)"/>
+    <text x="38" y="446">03 · serve (COPY)</text>
+    <text x="38" y="468" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="16" font-weight="600">Amazon Redshift</text>
+    <path d="M170 482 V500" stroke="#40e0d0" stroke-width="1.8" marker-end="url(#lhs-arrow)"/>
+    <rect x="20" y="504" width="300" height="52" rx="12" fill="#16304d" stroke="rgba(148,180,220,.3)"/>
+    <text x="38" y="524">04 · analyze</text>
+    <text x="38" y="546" fill="#e3ecf8" font-family="'Space Grotesk', ui-sans-serif, sans-serif" font-size="16" font-weight="600">Tableau dashboards</text>
+  </g>
+</svg></div>
+                  <div class="slide__body">
+                    <p class="eyebrow">Data engineering · cloud</p>
+                    <h3 class="slide__title">GSC NAM ETO Lakehouse</h3>
+                    <p class="slide__desc">An end-to-end lakehouse pipeline. Synthetic engineer-to-order (ETO) order data lands in AWS S3, is refined through bronze, silver and gold Delta tables in Databricks with PySpark and SQL, and is then served to Amazon Redshift via COPY for analytics in Tableau.</p>
+                    <ul class="bullets slide__points"><li>Medallion architecture: raw bronze → refined silver → analytics-ready gold Delta tables</li><li>Gold tables loaded into Amazon Redshift with COPY and visualized in Tableau</li></ul>
+                    <ul class="tags" aria-label="Built with"><li class="tag">Databricks</li><li class="tag">PySpark</li><li class="tag">Spark SQL</li><li class="tag">AWS S3</li><li class="tag">Amazon Redshift</li><li class="tag">Tableau</li></ul>
+                    <div class="slide__links"><button class="btn btn--sm btn--ghost" type="button" data-arch="lakehouse"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture<span class="sr-only"> of GSC NAM ETO Lakehouse</span></button></div>
+                  </div>
+                </article>
+                <article class="slide" id="slide-cyclist" aria-roledescription="slide" aria-label="5 of 6: Cyclist Behavior from GPS Trajectories">
+                  <a class="slide__media" href="https://github.com/stevenGGG23/Mining-Behavior-Patterns-from-Cyclist-GPS-Trajectories" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/cyclist-43.webp" alt="Map of Berlin bike ride traces in teal with near-miss incidents marked as red dots" width="1200" height="900" loading="lazy" decoding="async" /></a>
+                  <div class="slide__body">
+                    <p class="eyebrow">Data mining · geospatial</p>
+                    <h3 class="slide__title">Cyclist Behavior from GPS Trajectories</h3>
+                    <p class="slide__desc">Turns raw smartphone GPS traces from Berlin&#x27;s SimRa dataset into ride-level behavior features. A Python pipeline cleans 877 ride files, computes speed, stop, turn and braking features with haversine and bearing math, analyzes rider-tagged near misses, and clusters riding styles with K-means. Built with a classmate for a data mining course.</p>
+                    <ul class="bullets slide__points"><li>375,741 GPS points across 856 rides (4,936 km), with 408 rider-tagged near-miss incidents</li><li>Half of all incidents were close passes, and 73% involved a car</li></ul>
+                    <ul class="tags" aria-label="Built with"><li class="tag">Python</li><li class="tag">pandas</li><li class="tag">NumPy</li><li class="tag">scikit-learn</li><li class="tag">Matplotlib</li><li class="tag">Jupyter</li></ul>
+                    <div class="slide__links"><a class="btn btn--sm btn--ghost" href="https://github.com/stevenGGG23/Mining-Behavior-Patterns-from-Cyclist-GPS-Trajectories" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Code<span class="sr-only"> for Cyclist Behavior from GPS Trajectories</span></a><button class="btn btn--sm btn--ghost" type="button" data-arch="cyclist"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture<span class="sr-only"> of Cyclist Behavior from GPS Trajectories</span></button></div>
+                  </div>
+                </article>
+                <article class="slide" id="slide-sonosus" aria-roledescription="slide" aria-label="6 of 6: Sonosus VR Education">
+                  <div class="slide__media"><img src="assets/img/projects/sonosus-43.webp" alt="Sonosus VR Education homepage advertising point-of-care ultrasound and emergency imaging courses" width="1200" height="900" loading="lazy" decoding="async" /></div>
+                  <div class="slide__body">
+                    <p class="eyebrow">Client project · full-stack</p>
+                    <h3 class="slide__title">Sonosus VR Education</h3>
+                    <p class="slide__desc">A course and certification platform I built solo for Dr. Susanna Rudy, who teaches point-of-care ultrasound at Vanderbilt School of Nursing. Learners pay for courses, watch lessons that stay behind a paywall, pass timed exams and earn certificates that anyone can verify, while an admin studio runs courses, students, refunds and emails.</p>
+                    <ul class="bullets slide__points"><li>Checkout with card, Apple Pay and Google Pay; a purchase unlocks that course's paywalled video lessons</li><li>Certificates generated when a learner passes the final exam, plus a public page that validates any certificate ID</li></ul>
+                    <ul class="tags" aria-label="Built with"><li class="tag">Next.js</li><li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Tailwind CSS</li><li class="tag">Auth.js</li><li class="tag">Vercel</li></ul>
+                    <div class="slide__links"><a class="btn btn--sm btn--ghost" href="https://github.com/stevenGGG23/vr-radiology-certification" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Code<span class="sr-only"> for Sonosus VR Education</span></a><button class="btn btn--sm btn--ghost" type="button" data-arch="sonosus"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture<span class="sr-only"> of Sonosus VR Education</span></button><span class="slide__note">Live site is moving to its own domain soon</span></div>
+                  </div>
+                </article>
+                <!--SLIDES:end-->
+              </div>
+            </div>
+            <div class="spotlight__controls">
+              <div class="spotlight__dots" role="group" aria-label="Choose a featured project">
+                <!--DOTS:start-->
+                <button class="spotlight__dot" type="button" aria-controls="slide-gradpath">GradPath<span class="bar" aria-hidden="true"></span></button>
+                <button class="spotlight__dot" type="button" aria-controls="slide-propdesk">Prop Desk<span class="bar" aria-hidden="true"></span></button>
+                <button class="spotlight__dot" type="button" aria-controls="slide-openbank">Open Bank<span class="bar" aria-hidden="true"></span></button>
+                <button class="spotlight__dot" type="button" aria-controls="slide-lakehouse">Lakehouse<span class="bar" aria-hidden="true"></span></button>
+                <button class="spotlight__dot" type="button" aria-controls="slide-cyclist">Cyclist GPS<span class="bar" aria-hidden="true"></span></button>
+                <button class="spotlight__dot" type="button" aria-controls="slide-sonosus">Sonosus VR<span class="bar" aria-hidden="true"></span></button>
+              <!--DOTS:end-->
+              </div>
+              <div class="spotlight__arrows">
+                <button class="round-btn spotlight__pause" type="button" aria-label="Pause autoplay" aria-pressed="false"><svg class="icon"><use href="#i-pause" /></svg></button>
+                <button class="round-btn spotlight__prev" type="button" aria-label="Previous project"><svg class="icon"><use href="#i-left" /></svg></button>
+                <button class="round-btn spotlight__next" type="button" aria-label="Next project"><svg class="icon"><use href="#i-right" /></svg></button>
+              </div>
+            </div>
+            <p class="spotlight__live sr-only" aria-live="polite"></p>
+          </div>
+
+          <div class="subhead reveal" id="more-projects">
+            <h3>More things I've built <span class="eyebrow" id="project-count"></span></h3>
+            <div class="filters" role="group" aria-label="Filter projects">
+              <!--FILTERS:start-->
+              <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter" type="button" data-filter="data" aria-pressed="false">Data</button>
+              <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI</button>
+              <button class="filter" type="button" data-filter="systems" aria-pressed="false">Systems</button>
+              <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+              <button class="filter" type="button" data-filter="compilers" aria-pressed="false">Compilers</button>
+            <!--FILTERS:end-->
+            </div>
+          </div>
+
+          <div class="grid" id="project-grid">
+            <!--CARDS:start-->
+            <article class="card" data-area="systems">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://www.youtube.com/watch?v=ZnFNF_1SEKU" target="_blank" rel="noopener" aria-label="Watch the Concurrent Stock Market Simulator video"><svg class="icon" aria-hidden="true"><use href="#i-youtube" /></svg></a><a href="https://github.com/stevenGGG23/Concurrent-Stock-Market-Simulator" target="_blank" rel="noopener" aria-label="Concurrent Stock Market Simulator on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a><button type="button" data-arch="stocksim" aria-label="Concurrent Stock Market Simulator architecture diagram"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg></button></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/Concurrent-Stock-Market-Simulator" target="_blank" rel="noopener">Concurrent Stock Market Simulator</a></h4>
+              <p class="card__area">Systems · C</p>
+              <p class="card__desc">A multi-threaded C server that simulates a live market for many traders at once: a custom TCP protocol for terminal clients, a hand-written HTTP/1.0 JSON API with a web dashboard, and a writer-priority reader-writer lock built from POSIX semaphores.</p>
+              <ul class="card__tech" aria-label="Built with"><li>C</li><li>pthreads</li><li>Semaphores</li><li>TCP</li><li>HTTP</li></ul>
+            </article>
+            <article class="card" data-area="compilers">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/COOL-Language-Interpreter" target="_blank" rel="noopener" aria-label="COOL Compiler Toolchain on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/COOL-Language-Interpreter" target="_blank" rel="noopener">COOL Compiler Toolchain</a></h4>
+              <p class="card__area">Compilers · C++ · coursework</p>
+              <p class="card__desc">Three CSCI 4160 projects on the course's COOL compiler framework: I wrote the LALR(1) <a href="https://github.com/stevenGGG23/Parser-AST-Builder" target="_blank" rel="noopener">Bison grammar</a> that builds the AST, the <a href="https://github.com/stevenGGG23/Type-Checking-Compiler-Design-" target="_blank" rel="noopener">type rules</a> for a static checker (subtyping and least-upper-bound typing), and the expression evaluator of a tree-walking interpreter.</p>
+              <ul class="card__tech" aria-label="Built with"><li>C++</li><li>Flex</li><li>Bison</li><li>Make</li></ul>
+            </article>
+            <article class="card" data-area="ai">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/Dynamo---Fix-the-Broken-Terminal-Bench-Task" target="_blank" rel="noopener" aria-label="Terminal-Bench Task Repair on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/Dynamo---Fix-the-Broken-Terminal-Bench-Task" target="_blank" rel="noopener">Terminal-Bench Task Repair</a></h4>
+              <p class="card__area">AI evaluation</p>
+              <p class="card__desc">Repaired a broken agent-evaluation task where an AI agent must turn an Apache log into a JSON report. Removed a reference solution that had leaked into the agent's image, pinned the Docker image by digest, cut internet access and replaced an existence-only check with a real pytest verifier.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>pytest</li><li>Docker</li><li>TOML</li></ul>
+            </article>
+            <article class="card" data-area="data">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/Inverter-Module-Fault-Analysis" target="_blank" rel="noopener" aria-label="Solar Inverter Fault Monitor on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/Inverter-Module-Fault-Analysis" target="_blank" rel="noopener">Solar Inverter Fault Monitor</a></h4>
+              <p class="card__area">Data engineering · Python</p>
+              <p class="card__desc">Automated health checks for inverter modules across 21 utility-scale solar sites. A Seeq formula labels each module as faulted, offline, in a comms outage or frozen, only when there's enough sunlight, then groups fault codes into timed periods and exports per-site CSV reports.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>pandas</li><li>Seeq SPy</li><li>Jupyter</li></ul>
+            </article>
+            <article class="card" data-area="data">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/BoxingMonteCarlo---AI-Powered-Fight-Prediction-Engine" target="_blank" rel="noopener" aria-label="Boxing Monte Carlo on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/BoxingMonteCarlo---AI-Powered-Fight-Prediction-Engine" target="_blank" rel="noopener">Boxing Monte Carlo</a></h4>
+              <p class="card__area">Simulation · Python</p>
+              <p class="card__desc">Estimates win, draw and KO odds for any two boxers by simulating 100,000 fights in parallel across CPU cores. Each fight samples record, KO rate, height, reach and weight, with noise scaled to how much data each fighter has. Includes a Flask + Chart.js web UI.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>NumPy</li><li>multiprocessing</li><li>Flask</li><li>Chart.js</li></ul>
+            </article>
+            <article class="card" data-area="ai web">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/Jet-Friend" target="_blank" rel="noopener" aria-label="JetFriend on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a><a href="https://jet-friend.onrender.com/" target="_blank" rel="noopener" aria-label="JetFriend live site"><svg class="icon" aria-hidden="true"><use href="#i-external" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://jet-friend.onrender.com/" target="_blank" rel="noopener">JetFriend</a></h4>
+              <p class="card__area">AI app · team project</p>
+              <p class="card__desc">A conversational travel planner built on Flask and GPT-4o. It detects place and itinerary questions, adds curated destination data to the prompt, and has the model reply with styled itinerary cards. Built with two teammates and deployed on Render.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>Flask</li><li>OpenAI GPT-4o</li><li>JavaScript</li></ul>
+            </article>
+            <article class="card" data-area="data">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/Spatial-Selection-and-Spatial-Join" target="_blank" rel="noopener" aria-label="Nashville Crime by ZIP Code on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/Spatial-Selection-and-Spatial-Join" target="_blank" rel="noopener">Nashville Crime by ZIP Code</a></h4>
+              <p class="card__area">GIS · Python</p>
+              <p class="card__desc">Assigns 103,218 of 108,287 reported crime locations in Davidson County to its 38 ZIP codes. Dissolved 13,379 Census polygons into ZIP areas in QGIS, counted crimes per area, then rebuilt the workflow in GeoPandas with dissolve and spatial joins.</p>
+              <ul class="card__tech" aria-label="Built with"><li>QGIS</li><li>GeoPandas</li><li>Python</li><li>Shapefiles</li></ul>
+            </article>
+            <article class="card" data-area="data">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/NYC-Homicides-Near-Subway-Stations-Spatial-Analysis-with-PostGIS" target="_blank" rel="noopener" aria-label="NYC Subway Homicide Proximity on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/NYC-Homicides-Near-Subway-Stations-Spatial-Analysis-with-PostGIS" target="_blank" rel="noopener">NYC Subway Homicide Proximity</a></h4>
+              <p class="card__area">Spatial SQL</p>
+              <p class="card__desc">PostGIS analysis that counts homicides within 2,500 ft of each of NYC's 491 subway stations using ST_DWithin on projected geometries, then uses a window function to flag the 195 stations above their borough's average.</p>
+              <ul class="card__tech" aria-label="Built with"><li>PostgreSQL</li><li>PostGIS</li><li>SQL</li></ul>
+            </article>
+            <article class="card" data-area="ai">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/applied-ai-system-project" target="_blank" rel="noopener" aria-label="Game Glitch Investigator on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/applied-ai-system-project" target="_blank" rel="noopener">Game Glitch Investigator</a></h4>
+              <p class="card__area">Applied AI · CodePath</p>
+              <p class="card__desc">My CodePath AI110 final project: I fixed the bugs in an AI-generated Streamlit guessing game, then added a retrieval tab over a bug-pattern knowledge base, a built-in reliability evaluator and 27 pytest tests.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>Streamlit</li><li>pytest</li><li>Matplotlib</li></ul>
+            </article>
+            <article class="card" data-area="data">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://www.youtube.com/watch?v=ByDgGqsh7eA" target="_blank" rel="noopener" aria-label="Watch the Housing Data Dive: Ames, Iowa video"><svg class="icon" aria-hidden="true"><use href="#i-youtube" /></svg></a><a href="https://github.com/stevenGGG23/Housing-Data-Dive-Ames-Iowa-Real-Estate-Analysis" target="_blank" rel="noopener" aria-label="Housing Data Dive: Ames, Iowa on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/Housing-Data-Dive-Ames-Iowa-Real-Estate-Analysis" target="_blank" rel="noopener">Housing Data Dive: Ames, Iowa</a></h4>
+              <p class="card__area">Analytics · Python</p>
+              <p class="card__desc">Exploratory analysis of 1,460 home sales framed as a pricing guide for a real-estate firm. Overall quality (r = 0.79) and living area (r = 0.71) drive price, and neighborhood medians differ by 3.5×. Presented on YouTube as Data Dive 1.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>pandas</li><li>Matplotlib</li><li>Jupyter</li></ul>
+            </article>
+            <article class="card" data-area="systems">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/Concurrent-Employee-Datastore.-C" target="_blank" rel="noopener" aria-label="Concurrent Employee Datastore on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/Concurrent-Employee-Datastore.-C" target="_blank" rel="noopener">Concurrent Employee Datastore</a></h4>
+              <p class="card__area">Systems · C</p>
+              <p class="card__desc">A thread-per-client TCP server in C for searching and adding employee records. A writer-priority reader-writer lock lets searches by name, ZIP or salary run in parallel while writes get exclusive access.</p>
+              <ul class="card__tech" aria-label="Built with"><li>C</li><li>pthreads</li><li>Semaphores</li><li>TCP</li></ul>
+            </article>
+            <article class="card" data-area="ai">
+              <div class="card__top"><svg class="card__folder" aria-hidden="true"><use href="#i-folder" /></svg><div class="card__links"><a href="https://github.com/stevenGGG23/ai110-module5tinker-bughound-starter" target="_blank" rel="noopener" aria-label="BugHound Guardrails on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></div></div>
+              <h4 class="card__title"><a href="https://github.com/stevenGGG23/ai110-module5tinker-bughound-starter" target="_blank" rel="noopener">BugHound Guardrails</a></h4>
+              <p class="card__area">AI agents · CodePath</p>
+              <p class="card__desc">Added reliability guardrails to a code-fixing agent that proposes patches with Gemini: an AST syntax check that blocks broken fixes from auto-applying, a penalty for bloated patches, and a fallback when the model doesn't return clean JSON.</p>
+              <ul class="card__tech" aria-label="Built with"><li>Python</li><li>Gemini API</li><li>Streamlit</li><li>pytest</li></ul>
+            </article>
+          <!--CARDS:end-->
+          </div>
+          <div class="more-wrap">
+            <button class="btn btn--ghost" type="button" id="show-more" aria-controls="project-grid" aria-expanded="false"><span class="label">Show all</span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trading -->
+      <section class="section" id="trading" aria-labelledby="trading-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="trading-title"><span class="path">~/</span>trading</h2>
+            <a class="link-arrow" href="https://github.com/stevenGGG23/Prop-Desk" target="_blank" rel="noopener">Prop Desk on GitHub<svg class="icon"><use href="#i-arrow" /></svg></a>
+          </div>
+          <!--TRADING:start-->
+          <p class="lede reveal">
+            I trade Micro Nasdaq futures on funded prop-firm accounts with a bot I wrote, and I built the software that runs
+            the desk around it. <span class="strong">Prop Desk</span> tracks every account's risk, and a trading
+            <span class="strong">agent</span> I built recalculates position sizes each day, updates my TradingView alerts and sends
+            the results to my phone.
+          </p>
+
+          <div class="trade-grid">
+            <figure class="phone reveal">
+              <div class="phone__frame">
+                <video class="phone__video" muted loop playsinline preload="none" poster="assets/video/prop-desk-report-poster.webp" width="540" height="1170" aria-label="Screen recording of the agent's daily report email scrolling on a phone">
+                  <source src="assets/video/prop-desk-report.mp4" type="video/mp4" />
+                  <source src="assets/video/prop-desk-report.webm" type="video/webm" />
+                </video>
+                <button class="phone__toggle" type="button" aria-label="Play video"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg></button>
+                <button class="phone__expand" type="button" aria-label="Open the phone recording larger"><svg class="icon" aria-hidden="true"><use href="#i-external" /></svg></button>
+              </div>
+              <figcaption>The agent's report on my phone: the day's result, payout odds from 3,000 simulated paths, and every alert it resized and verified for Monday.</figcaption>
+            </figure>
+
+            <article class="bot reveal">
+              <p class="eyebrow">Pine Script · MNQ 15-minute · trades my funded accounts</p>
+              <h3 class="bot__title">Sniper Range Bot V2</h3>
+              <p class="bot__desc">
+                An automated range-breakout strategy for Micro Nasdaq-100 futures. Position size comes from a fixed risk per trade,
+                every trade uses a 1:1 reward-to-risk, and a weekday filter trades only the direction that has held up historically on
+                that day. It's built to stay inside prop-firm drawdown and consistency rules.
+              </p>
+              <p class="eyebrow bot__label">TradingView backtest · Mar 31 – Sep 25, 2026</p>
+              <div class="stats"><div class="stat"><span class="stat__label">Win rate</span><span class="stat__value">75.86%</span><span class="stat__sub">66 of 87 trades</span></div><div class="stat"><span class="stat__label">Profit factor</span><span class="stat__value">3.16</span><span class="stat__sub">gross profit ÷ gross loss</span></div><div class="stat"><span class="stat__label">Net P&amp;L</span><span class="stat__value">+$92.5K</span><span class="stat__sub">+185% on a 50K backtest account</span></div><div class="stat"><span class="stat__label">Max drawdown</span><span class="stat__value">7.11%</span><span class="stat__sub">peak to trough, per TradingView</span></div></div>
+              
+              <figure class="equity" id="equity" tabindex="0" aria-describedby="equity-desc">
+                <figcaption class="equity__head">
+                  <span class="equity__title">Backtested cumulative P&amp;L</span>
+                  <span class="equity__sub">Backtest · closed trades, Mar 31 – Sep 25, 2026 · 50K account</span>
+                </figcaption>
+                <p class="sr-only" id="equity-desc">Line chart of cumulative profit across 87 backtested trades, rising from $0 on March 31 to $92,538 on September 25, 2026. Use the left and right arrow keys to step through trades. A full table follows the chart.</p>
+                <div class="equity__plot">
+                  <svg class="eq-svg eq-svg--full" viewBox="0 0 720 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-points='[[59.4,260.8,1,"Apr 1","Long","Long TP",2070.0,2070.0],[62.6,266.0,2,"Apr 2","Short","Short SL",-2070.0,0.0],[66.3,260.8,3,"Apr 3","Short","Short TP",2088.0,2088.0],[78.4,265.9,4,"Apr 7","Short","Short SL",-2040.0,48.0],[81.3,260.7,5,"Apr 8","Long","Long TP",2062.5,2110.5],[87.5,255.5,6,"Apr 10","Short","Short TP",2079.0,4189.5],[96.9,250.3,7,"Apr 13","Long","Long TP",2092.5,6282.0],[109.5,245.1,8,"Apr 17","Long","Long TP",2068.0,8350.0],[122.0,250.2,9,"Apr 21","Long","Long SL",-2046.0,6304.0],[125.8,245.2,10,"Apr 22","Long","Long TP",1997.5,8301.5],[128.1,250.5,11,"Apr 23","Short","Short SL",-2100.0,6201.5],[131.2,245.3,12,"Apr 24","Long","Long TP",2072.0,8273.5],[144.0,240.1,13,"Apr 28","Short","Short TP",2090.0,10363.5],[150.1,245.1,14,"Apr 30","Short","Short SL",-1992.0,8371.5],[153.3,239.8,15,"May 1","Short","Short TP",2090.0,10461.5],[165.7,234.6,16,"May 5","Long","Long TP",2100.0,12561.5],[168.8,239.8,17,"May 6","Long","Long SL",-2067.0,10494.5],[175.0,234.6,18,"May 8","Long","Long TP",2070.0,12564.5],[187.6,229.4,19,"May 12","Short","Short TP",2088.0,14652.5],[190.9,224.3,20,"May 13","Long","Long TP",2016.0,16668.5],[196.9,219.5,21,"May 15","Short","Short TP",1926.0,18594.5],[209.5,214.3,22,"May 19","Long","Long TP",2090.0,20684.5],[212.6,209.2,23,"May 20","Long","Long TP",2016.0,22700.5],[215.6,204.1,24,"May 21","Short","Short TP",2076.0,24776.5],[218.7,198.9,25,"May 22","Short","Short TP",2080.0,26856.5],[228.1,204.1,26,"May 25","Long","Long SL",-2094.5,24762.0],[231.4,209.2,27,"May 26","Long","Long SL",-2033.0,22729.0],[240.8,204.0,28,"May 29","Long","Long TP",2086.5,24815.5],[253.3,198.8,29,"Jun 2","Long","Long TP",2062.5,26878.0],[256.8,193.7,30,"Jun 3","Long","Long TP",2060.0,28938.0],[262.7,188.6,31,"Jun 5","Short","Short TP",2024.0,30962.0],[275.1,183.5,32,"Jun 9","Long","Long TP",2030.0,32992.0],[278.4,188.6,33,"Jun 10","Long","Long SL",-2018.5,30973.5],[284.4,183.6,34,"Jun 12","Short","Short TP",1989.0,32962.5],[293.9,188.7,35,"Jun 15","Long","Long SL",-2057.0,30905.5],[297.1,193.8,36,"Jun 16","Short","Short SL",-2030.0,28875.5],[300.2,188.7,37,"Jun 17","Long","Long TP",2046.0,30921.5],[306.3,193.9,38,"Jun 19","Short","Short SL",-2081.5,28840.0],[316.3,188.9,39,"Jun 22","Long","Long TP",1993.5,30833.5],[318.8,184.0,40,"Jun 23","Short","Short TP",1962.0,32795.5],[322.1,189.0,41,"Jun 24","Long","Long SL",-1998.0,30797.5],[328.3,183.9,42,"Jun 26","Long","Long TP",2043.0,32840.5],[338.2,178.7,43,"Jun 29","Long","Long TP",2076.0,34916.5],[340.8,173.7,44,"Jun 30","Short","Short TP",2016.0,36932.5],[347.0,168.6,45,"Jul 2","Short","Short TP",2010.0,38942.5],[351.1,163.7,46,"Jul 3","Long","Long TP",1962.0,40904.5],[362.7,158.5,47,"Jul 7","Long","Long TP",2100.0,43004.5],[372.0,153.4,48,"Jul 10","Short","Short TP",2025.0,45029.5],[385.3,148.3,49,"Jul 14","Long","Long TP",2061.0,47090.5],[393.9,153.5,50,"Jul 17","Short","Short SL",-2082.5,45008.0],[406.3,148.3,51,"Jul 21","Long","Long TP",2061.5,47069.5],[415.8,143.1,52,"Jul 24","Short","Short TP",2090.0,49159.5],[425.1,138.0,53,"Jul 27","Long","Long TP",2040.0,51199.5],[428.2,132.9,54,"Jul 28","Short","Short TP",2040.0,53239.5],[432.4,138.1,55,"Jul 29","Long","Long SL",-2082.0,51157.5],[437.6,132.9,56,"Jul 31","Long","Long TP",2085.0,53242.5],[450.0,127.7,57,"Aug 4","Long","Long TP",2079.0,55321.5],[453.2,122.5,58,"Aug 5","Long","Long TP",2079.0,57400.5],[457.0,117.5,59,"Aug 6","Short","Short TP",1980.0,59380.5],[459.7,112.4,60,"Aug 7","Long","Long TP",2061.5,61442.0],[469.1,107.3,61,"Aug 10","Long","Long TP",2047.5,63489.5],[472.0,102.2,62,"Aug 11","Short","Short TP",2025.0,65514.5],[475.2,97.0,63,"Aug 12","Long","Long TP",2091.0,67605.5],[481.6,91.8,64,"Aug 14","Long","Long TP",2092.5,69698.0],[490.7,86.6,65,"Aug 17","Long","Long TP",2052.0,71750.0],[494.1,81.5,66,"Aug 18","Short","Short TP",2054.0,73804.0],[503.3,76.3,67,"Aug 21","Long","Long TP",2082.5,75886.5],[515.8,71.2,68,"Aug 25","Long","Long TP",2040.0,77926.5],[522.0,66.0,69,"Aug 27","Short","Short TP",2058.0,79984.5],[525.2,71.2,70,"Aug 28","Short","Short SL",-2079.0,77905.5],[534.8,66.2,71,"Aug 31","Long","Long TP",2032.0,79937.5],[537.6,60.9,72,"Sep 1","Long","Long TP",2091.0,82028.5],[540.8,66.0,73,"Sep 2","Long","Long SL",-2042.5,79986.0],[544.0,70.8,74,"Sep 3","Short","Short SL",-1903.5,78082.5],[547.1,75.9,75,"Sep 4","Long","Long SL",-2026.5,76056.0],[556.4,70.7,76,"Sep 7","Long","Long TP",2064.0,78120.0],[559.5,65.5,77,"Sep 8","Short","Short TP",2074.0,80194.0],[569.0,60.6,78,"Sep 11","Long","Long TP",1981.0,82175.0],[581.6,65.6,79,"Sep 15","Long","Long SL",-2031.5,80143.5],[584.5,60.5,80,"Sep 16","Long","Long TP",2058.0,82201.5],[587.6,55.2,81,"Sep 17","Short","Short TP",2100.0,84301.5],[590.8,50.1,82,"Sep 18","Long","Long TP",2060.0,86361.5],[600.1,44.9,83,"Sep 21","Long","Long TP",2079.0,88440.5],[603.2,50.0,84,"Sep 22","Short","Short SL",-2052.0,86388.5],[606.4,44.8,85,"Sep 23","Long","Long TP",2088.0,88476.5],[609.5,39.6,86,"Sep 24","Short","Short TP",2081.5,90558.0],[613.0,34.7,87,"Sep 25","Long","Long TP",1980.0,92538.0]]'>
+                    <line class="eq-grid" x1="56" x2="628" y1="266.0" y2="266.0" /><text class="eq-tick" x="48" y="270.0" text-anchor="end">$0</text><line class="eq-grid" x1="56" x2="628" y1="203.5" y2="203.5" /><text class="eq-tick" x="48" y="207.5" text-anchor="end">$25K</text><line class="eq-grid" x1="56" x2="628" y1="141.0" y2="141.0" /><text class="eq-tick" x="48" y="145.0" text-anchor="end">$50K</text><line class="eq-grid" x1="56" x2="628" y1="78.5" y2="78.5" /><text class="eq-tick" x="48" y="82.5" text-anchor="end">$75K</text><line class="eq-grid" x1="56" x2="628" y1="16.0" y2="16.0" /><text class="eq-tick" x="48" y="20.0" text-anchor="end">$100K</text><line class="eq-grid eq-grid--v" x1="59.1" x2="59.1" y1="16" y2="266" /><text class="eq-tick" x="63.1" y="290">Apr</text><line class="eq-grid eq-grid--v" x1="152.9" x2="152.9" y1="16" y2="266" /><text class="eq-tick" x="156.9" y="290">May</text><line class="eq-grid eq-grid--v" x1="249.8" x2="249.8" y1="16" y2="266" /><text class="eq-tick" x="253.8" y="290">Jun</text><line class="eq-grid eq-grid--v" x1="343.6" x2="343.6" y1="16" y2="266" /><text class="eq-tick" x="347.6" y="290">Jul</text><line class="eq-grid eq-grid--v" x1="440.5" x2="440.5" y1="16" y2="266" /><text class="eq-tick" x="444.5" y="290">Aug</text><line class="eq-grid eq-grid--v" x1="537.4" x2="537.4" y1="16" y2="266" /><text class="eq-tick" x="541.4" y="290">Sep</text>
+                    <line class="eq-base" x1="56" x2="628" y1="266.0" y2="266.0" />
+                    <path class="eq-area" d="M56.0,266.0 L59.4,260.8 L62.6,266.0 L66.3,260.8 L78.4,265.9 L81.3,260.7 L87.5,255.5 L96.9,250.3 L109.5,245.1 L122.0,250.2 L125.8,245.2 L128.1,250.5 L131.2,245.3 L144.0,240.1 L150.1,245.1 L153.3,239.8 L165.7,234.6 L168.8,239.8 L175.0,234.6 L187.6,229.4 L190.9,224.3 L196.9,219.5 L209.5,214.3 L212.6,209.2 L215.6,204.1 L218.7,198.9 L228.1,204.1 L231.4,209.2 L240.8,204.0 L253.3,198.8 L256.8,193.7 L262.7,188.6 L275.1,183.5 L278.4,188.6 L284.4,183.6 L293.9,188.7 L297.1,193.8 L300.2,188.7 L306.3,193.9 L316.3,188.9 L318.8,184.0 L322.1,189.0 L328.3,183.9 L338.2,178.7 L340.8,173.7 L347.0,168.6 L351.1,163.7 L362.7,158.5 L372.0,153.4 L385.3,148.3 L393.9,153.5 L406.3,148.3 L415.8,143.1 L425.1,138.0 L428.2,132.9 L432.4,138.1 L437.6,132.9 L450.0,127.7 L453.2,122.5 L457.0,117.5 L459.7,112.4 L469.1,107.3 L472.0,102.2 L475.2,97.0 L481.6,91.8 L490.7,86.6 L494.1,81.5 L503.3,76.3 L515.8,71.2 L522.0,66.0 L525.2,71.2 L534.8,66.2 L537.6,60.9 L540.8,66.0 L544.0,70.8 L547.1,75.9 L556.4,70.7 L559.5,65.5 L569.0,60.6 L581.6,65.6 L584.5,60.5 L587.6,55.2 L590.8,50.1 L600.1,44.9 L603.2,50.0 L606.4,44.8 L609.5,39.6 L613.0,34.7 L613.0,266.0 L56.0,266.0 Z" />
+                    <path class="eq-line" d="M56.0,266.0 L59.4,260.8 L62.6,266.0 L66.3,260.8 L78.4,265.9 L81.3,260.7 L87.5,255.5 L96.9,250.3 L109.5,245.1 L122.0,250.2 L125.8,245.2 L128.1,250.5 L131.2,245.3 L144.0,240.1 L150.1,245.1 L153.3,239.8 L165.7,234.6 L168.8,239.8 L175.0,234.6 L187.6,229.4 L190.9,224.3 L196.9,219.5 L209.5,214.3 L212.6,209.2 L215.6,204.1 L218.7,198.9 L228.1,204.1 L231.4,209.2 L240.8,204.0 L253.3,198.8 L256.8,193.7 L262.7,188.6 L275.1,183.5 L278.4,188.6 L284.4,183.6 L293.9,188.7 L297.1,193.8 L300.2,188.7 L306.3,193.9 L316.3,188.9 L318.8,184.0 L322.1,189.0 L328.3,183.9 L338.2,178.7 L340.8,173.7 L347.0,168.6 L351.1,163.7 L362.7,158.5 L372.0,153.4 L385.3,148.3 L393.9,153.5 L406.3,148.3 L415.8,143.1 L425.1,138.0 L428.2,132.9 L432.4,138.1 L437.6,132.9 L450.0,127.7 L453.2,122.5 L457.0,117.5 L459.7,112.4 L469.1,107.3 L472.0,102.2 L475.2,97.0 L481.6,91.8 L490.7,86.6 L494.1,81.5 L503.3,76.3 L515.8,71.2 L522.0,66.0 L525.2,71.2 L534.8,66.2 L537.6,60.9 L540.8,66.0 L544.0,70.8 L547.1,75.9 L556.4,70.7 L559.5,65.5 L569.0,60.6 L581.6,65.6 L584.5,60.5 L587.6,55.2 L590.8,50.1 L600.1,44.9 L603.2,50.0 L606.4,44.8 L609.5,39.6 L613.0,34.7" />
+                    <circle class="eq-end" cx="613.0" cy="34.7" r="4.5" />
+                    <text class="eq-end-label" x="623.0" y="39.7">+$92,538</text>
+                    <g class="eq-hover" visibility="hidden">
+                      <line class="eq-cross" x1="0" x2="0" y1="16" y2="266" />
+                      <circle class="eq-dot" cx="0" cy="0" r="5" />
+                    </g>
+                    <rect class="eq-hit" x="56" y="16" width="572" height="250" />
+                  </svg>
+                  <svg class="eq-svg eq-svg--compact" viewBox="0 0 340 250" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-points='[[45.7,215.9,1,"Apr 1","Long","Long TP",2070.0,2070.0],[47.3,220.0,2,"Apr 2","Short","Short SL",-2070.0,0.0],[49.1,215.9,3,"Apr 3","Short","Short TP",2088.0,2088.0],[55.0,219.9,4,"Apr 7","Short","Short SL",-2040.0,48.0],[56.5,215.9,5,"Apr 8","Long","Long TP",2062.5,2110.5],[59.5,211.8,6,"Apr 10","Short","Short TP",2079.0,4189.5],[64.2,207.7,7,"Apr 13","Long","Long TP",2092.5,6282.0],[70.4,203.6,8,"Apr 17","Long","Long TP",2068.0,8350.0],[76.6,207.6,9,"Apr 21","Long","Long SL",-2046.0,6304.0],[78.4,203.7,10,"Apr 22","Long","Long TP",1997.5,8301.5],[79.6,207.8,11,"Apr 23","Short","Short SL",-2100.0,6201.5],[81.1,203.8,12,"Apr 24","Long","Long TP",2072.0,8273.5],[87.4,199.7,13,"Apr 28","Short","Short TP",2090.0,10363.5],[90.4,203.6,14,"Apr 30","Short","Short SL",-1992.0,8371.5],[91.9,199.5,15,"May 1","Short","Short TP",2090.0,10461.5],[98.1,195.4,16,"May 5","Long","Long TP",2100.0,12561.5],[99.6,199.4,17,"May 6","Long","Long SL",-2067.0,10494.5],[102.7,195.4,18,"May 8","Long","Long TP",2070.0,12564.5],[108.9,191.3,19,"May 12","Short","Short TP",2088.0,14652.5],[110.5,187.3,20,"May 13","Long","Long TP",2016.0,16668.5],[113.5,183.6,21,"May 15","Short","Short TP",1926.0,18594.5],[119.7,179.5,22,"May 19","Long","Long TP",2090.0,20684.5],[121.2,175.5,23,"May 20","Long","Long TP",2016.0,22700.5],[122.7,171.4,24,"May 21","Short","Short TP",2076.0,24776.5],[124.2,167.4,25,"May 22","Short","Short TP",2080.0,26856.5],[128.9,171.5,26,"May 25","Long","Long SL",-2094.5,24762.0],[130.5,175.5,27,"May 26","Long","Long SL",-2033.0,22729.0],[135.1,171.4,28,"May 29","Long","Long TP",2086.5,24815.5],[141.3,167.3,29,"Jun 2","Long","Long TP",2062.5,26878.0],[143.0,163.3,30,"Jun 3","Long","Long TP",2060.0,28938.0],[145.9,159.3,31,"Jun 5","Short","Short TP",2024.0,30962.0],[152.0,155.3,32,"Jun 9","Long","Long TP",2030.0,32992.0],[153.7,159.3,33,"Jun 10","Long","Long SL",-2018.5,30973.5],[156.6,155.4,34,"Jun 12","Short","Short TP",1989.0,32962.5],[161.3,159.4,35,"Jun 15","Long","Long SL",-2057.0,30905.5],[162.8,163.4,36,"Jun 16","Short","Short SL",-2030.0,28875.5],[164.4,159.4,37,"Jun 17","Long","Long TP",2046.0,30921.5],[167.4,163.5,38,"Jun 19","Short","Short SL",-2081.5,28840.0],[172.4,159.6,39,"Jun 22","Long","Long TP",1993.5,30833.5],[173.6,155.7,40,"Jun 23","Short","Short TP",1962.0,32795.5],[175.2,159.6,41,"Jun 24","Long","Long SL",-1998.0,30797.5],[178.2,155.6,42,"Jun 26","Long","Long TP",2043.0,32840.5],[183.1,151.6,43,"Jun 29","Long","Long TP",2076.0,34916.5],[184.4,147.6,44,"Jun 30","Short","Short TP",2016.0,36932.5],[187.5,143.7,45,"Jul 2","Short","Short TP",2010.0,38942.5],[189.5,139.8,46,"Jul 3","Long","Long TP",1962.0,40904.5],[195.2,135.7,47,"Jul 7","Long","Long TP",2100.0,43004.5],[199.8,131.7,48,"Jul 10","Short","Short TP",2025.0,45029.5],[206.3,127.7,49,"Jul 14","Long","Long TP",2061.0,47090.5],[210.6,131.8,50,"Jul 17","Short","Short SL",-2082.5,45008.0],[216.7,127.7,51,"Jul 21","Long","Long TP",2061.5,47069.5],[221.4,123.6,52,"Jul 24","Short","Short TP",2090.0,49159.5],[226.0,119.6,53,"Jul 27","Long","Long TP",2040.0,51199.5],[227.5,115.7,54,"Jul 28","Short","Short TP",2040.0,53239.5],[229.5,119.7,55,"Jul 29","Long","Long SL",-2082.0,51157.5],[232.1,115.6,56,"Jul 31","Long","Long TP",2085.0,53242.5],[238.3,111.6,57,"Aug 4","Long","Long TP",2079.0,55321.5],[239.8,107.5,58,"Aug 5","Long","Long TP",2079.0,57400.5],[241.7,103.6,59,"Aug 6","Short","Short TP",1980.0,59380.5],[243.0,99.6,60,"Aug 7","Long","Long TP",2061.5,61442.0],[247.7,95.6,61,"Aug 10","Long","Long TP",2047.5,63489.5],[249.1,91.6,62,"Aug 11","Short","Short TP",2025.0,65514.5],[250.7,87.5,63,"Aug 12","Long","Long TP",2091.0,67605.5],[253.8,83.4,64,"Aug 14","Long","Long TP",2092.5,69698.0],[258.3,79.4,65,"Aug 17","Long","Long TP",2052.0,71750.0],[260.0,75.3,66,"Aug 18","Short","Short TP",2054.0,73804.0],[264.5,71.3,67,"Aug 21","Long","Long TP",2082.5,75886.5],[270.7,67.3,68,"Aug 25","Long","Long TP",2040.0,77926.5],[273.7,63.2,69,"Aug 27","Short","Short TP",2058.0,79984.5],[275.3,67.3,70,"Aug 28","Short","Short SL",-2079.0,77905.5],[280.0,63.3,71,"Aug 31","Long","Long TP",2032.0,79937.5],[281.4,59.2,72,"Sep 1","Long","Long TP",2091.0,82028.5],[283.0,63.2,73,"Sep 2","Long","Long SL",-2042.5,79986.0],[284.6,67.0,74,"Sep 3","Short","Short SL",-1903.5,78082.5],[286.1,70.9,75,"Sep 4","Long","Long SL",-2026.5,76056.0],[290.7,66.9,76,"Sep 7","Long","Long TP",2064.0,78120.0],[292.2,62.8,77,"Sep 8","Short","Short TP",2074.0,80194.0],[296.9,58.9,78,"Sep 11","Long","Long TP",1981.0,82175.0],[303.1,62.9,79,"Sep 15","Long","Long SL",-2031.5,80143.5],[304.6,58.9,80,"Sep 16","Long","Long TP",2058.0,82201.5],[306.1,54.8,81,"Sep 17","Short","Short TP",2100.0,84301.5],[307.7,50.7,82,"Sep 18","Long","Long TP",2060.0,86361.5],[312.3,46.7,83,"Sep 21","Long","Long TP",2079.0,88440.5],[313.8,50.7,84,"Sep 22","Short","Short SL",-2052.0,86388.5],[315.4,46.6,85,"Sep 23","Long","Long TP",2088.0,88476.5],[316.9,42.5,86,"Sep 24","Short","Short TP",2081.5,90558.0],[318.6,38.6,87,"Sep 25","Long","Long TP",1980.0,92538.0]]'>
+                    <line class="eq-grid" x1="44" x2="326" y1="220.0" y2="220.0" /><text class="eq-tick" x="36" y="224.0" text-anchor="end">$0</text><line class="eq-grid" x1="44" x2="326" y1="122.0" y2="122.0" /><text class="eq-tick" x="36" y="126.0" text-anchor="end">$50K</text><line class="eq-grid" x1="44" x2="326" y1="24.0" y2="24.0" /><text class="eq-tick" x="36" y="28.0" text-anchor="end">$100K</text><line class="eq-grid eq-grid--v" x1="45.5" x2="45.5" y1="24" y2="220" /><text class="eq-tick" x="49.5" y="240">Apr</text><line class="eq-grid eq-grid--v" x1="139.5" x2="139.5" y1="24" y2="220" /><text class="eq-tick" x="143.5" y="240">Jun</text><line class="eq-grid eq-grid--v" x1="233.5" x2="233.5" y1="24" y2="220" /><text class="eq-tick" x="237.5" y="240">Aug</text>
+                    <line class="eq-base" x1="44" x2="326" y1="220.0" y2="220.0" />
+                    <path class="eq-area" d="M44.0,220.0 L45.7,215.9 L47.3,220.0 L49.1,215.9 L55.0,219.9 L56.5,215.9 L59.5,211.8 L64.2,207.7 L70.4,203.6 L76.6,207.6 L78.4,203.7 L79.6,207.8 L81.1,203.8 L87.4,199.7 L90.4,203.6 L91.9,199.5 L98.1,195.4 L99.6,199.4 L102.7,195.4 L108.9,191.3 L110.5,187.3 L113.5,183.6 L119.7,179.5 L121.2,175.5 L122.7,171.4 L124.2,167.4 L128.9,171.5 L130.5,175.5 L135.1,171.4 L141.3,167.3 L143.0,163.3 L145.9,159.3 L152.0,155.3 L153.7,159.3 L156.6,155.4 L161.3,159.4 L162.8,163.4 L164.4,159.4 L167.4,163.5 L172.4,159.6 L173.6,155.7 L175.2,159.6 L178.2,155.6 L183.1,151.6 L184.4,147.6 L187.5,143.7 L189.5,139.8 L195.2,135.7 L199.8,131.7 L206.3,127.7 L210.6,131.8 L216.7,127.7 L221.4,123.6 L226.0,119.6 L227.5,115.7 L229.5,119.7 L232.1,115.6 L238.3,111.6 L239.8,107.5 L241.7,103.6 L243.0,99.6 L247.7,95.6 L249.1,91.6 L250.7,87.5 L253.8,83.4 L258.3,79.4 L260.0,75.3 L264.5,71.3 L270.7,67.3 L273.7,63.2 L275.3,67.3 L280.0,63.3 L281.4,59.2 L283.0,63.2 L284.6,67.0 L286.1,70.9 L290.7,66.9 L292.2,62.8 L296.9,58.9 L303.1,62.9 L304.6,58.9 L306.1,54.8 L307.7,50.7 L312.3,46.7 L313.8,50.7 L315.4,46.6 L316.9,42.5 L318.6,38.6 L318.6,220.0 L44.0,220.0 Z" />
+                    <path class="eq-line" d="M44.0,220.0 L45.7,215.9 L47.3,220.0 L49.1,215.9 L55.0,219.9 L56.5,215.9 L59.5,211.8 L64.2,207.7 L70.4,203.6 L76.6,207.6 L78.4,203.7 L79.6,207.8 L81.1,203.8 L87.4,199.7 L90.4,203.6 L91.9,199.5 L98.1,195.4 L99.6,199.4 L102.7,195.4 L108.9,191.3 L110.5,187.3 L113.5,183.6 L119.7,179.5 L121.2,175.5 L122.7,171.4 L124.2,167.4 L128.9,171.5 L130.5,175.5 L135.1,171.4 L141.3,167.3 L143.0,163.3 L145.9,159.3 L152.0,155.3 L153.7,159.3 L156.6,155.4 L161.3,159.4 L162.8,163.4 L164.4,159.4 L167.4,163.5 L172.4,159.6 L173.6,155.7 L175.2,159.6 L178.2,155.6 L183.1,151.6 L184.4,147.6 L187.5,143.7 L189.5,139.8 L195.2,135.7 L199.8,131.7 L206.3,127.7 L210.6,131.8 L216.7,127.7 L221.4,123.6 L226.0,119.6 L227.5,115.7 L229.5,119.7 L232.1,115.6 L238.3,111.6 L239.8,107.5 L241.7,103.6 L243.0,99.6 L247.7,95.6 L249.1,91.6 L250.7,87.5 L253.8,83.4 L258.3,79.4 L260.0,75.3 L264.5,71.3 L270.7,67.3 L273.7,63.2 L275.3,67.3 L280.0,63.3 L281.4,59.2 L283.0,63.2 L284.6,67.0 L286.1,70.9 L290.7,66.9 L292.2,62.8 L296.9,58.9 L303.1,62.9 L304.6,58.9 L306.1,54.8 L307.7,50.7 L312.3,46.7 L313.8,50.7 L315.4,46.6 L316.9,42.5 L318.6,38.6" />
+                    <circle class="eq-end" cx="318.6" cy="38.6" r="4.5" />
+                    <text class="eq-end-label" x="312.6" y="28.6" text-anchor="end">+$92.5K</text>
+                    <g class="eq-hover" visibility="hidden">
+                      <line class="eq-cross" x1="0" x2="0" y1="24" y2="220" />
+                      <circle class="eq-dot" cx="0" cy="0" r="5" />
+                    </g>
+                    <rect class="eq-hit" x="44" y="24" width="282" height="196" />
+                  </svg>
+                  <div class="eq-tip" role="status" aria-live="polite" hidden></div>
+                </div>
+              </figure>
+              <ul class="days" aria-label="Direction filter by weekday"><li><span class="day">Mon</span>Long only</li><li><span class="day">Tue</span>Both</li><li><span class="day">Wed</span>Long only</li><li><span class="day">Thu</span>Short only</li><li><span class="day">Fri</span>Both</li></ul>
+              <p class="caveat">TradingView backtest, MNQ 15m, Mar 31 – Sep 25, 2026. Past performance does not guarantee future results. Not financial advice.</p>
+              
+              <details class="trade-table">
+                <summary>View all 87 backtest trades as a table</summary>
+                <div class="table-scroll">
+                  <table>
+                    <thead><tr><th scope="col">#</th><th scope="col">Exit date</th><th scope="col">Side</th><th scope="col">Exit</th><th scope="col" class="num">P&amp;L</th><th scope="col" class="num">Cumulative</th></tr></thead>
+                    <tbody><tr><td>1</td><td>Apr 1, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,070</td><td class="num">+$2,070</td></tr><tr><td>2</td><td>Apr 2, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,070</td><td class="num">$0</td></tr><tr><td>3</td><td>Apr 3, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,088</td><td class="num">+$2,088</td></tr><tr><td>4</td><td>Apr 7, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,040</td><td class="num">+$48</td></tr><tr><td>5</td><td>Apr 8, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,062</td><td class="num">+$2,110</td></tr><tr><td>6</td><td>Apr 10, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,079</td><td class="num">+$4,190</td></tr><tr><td>7</td><td>Apr 13, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,092</td><td class="num">+$6,282</td></tr><tr><td>8</td><td>Apr 17, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,068</td><td class="num">+$8,350</td></tr><tr><td>9</td><td>Apr 21, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,046</td><td class="num">+$6,304</td></tr><tr><td>10</td><td>Apr 22, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$1,998</td><td class="num">+$8,302</td></tr><tr><td>11</td><td>Apr 23, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,100</td><td class="num">+$6,202</td></tr><tr><td>12</td><td>Apr 24, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,072</td><td class="num">+$8,274</td></tr><tr><td>13</td><td>Apr 28, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,090</td><td class="num">+$10,364</td></tr><tr><td>14</td><td>Apr 30, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$1,992</td><td class="num">+$8,372</td></tr><tr><td>15</td><td>May 1, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,090</td><td class="num">+$10,462</td></tr><tr><td>16</td><td>May 5, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,100</td><td class="num">+$12,562</td></tr><tr><td>17</td><td>May 6, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,067</td><td class="num">+$10,494</td></tr><tr><td>18</td><td>May 8, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,070</td><td class="num">+$12,564</td></tr><tr><td>19</td><td>May 12, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,088</td><td class="num">+$14,652</td></tr><tr><td>20</td><td>May 13, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,016</td><td class="num">+$16,668</td></tr><tr><td>21</td><td>May 15, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$1,926</td><td class="num">+$18,594</td></tr><tr><td>22</td><td>May 19, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,090</td><td class="num">+$20,684</td></tr><tr><td>23</td><td>May 20, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,016</td><td class="num">+$22,700</td></tr><tr><td>24</td><td>May 21, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,076</td><td class="num">+$24,776</td></tr><tr><td>25</td><td>May 22, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,080</td><td class="num">+$26,856</td></tr><tr><td>26</td><td>May 25, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,094</td><td class="num">+$24,762</td></tr><tr><td>27</td><td>May 26, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,033</td><td class="num">+$22,729</td></tr><tr><td>28</td><td>May 29, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,086</td><td class="num">+$24,816</td></tr><tr><td>29</td><td>Jun 2, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,062</td><td class="num">+$26,878</td></tr><tr><td>30</td><td>Jun 3, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,060</td><td class="num">+$28,938</td></tr><tr><td>31</td><td>Jun 5, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,024</td><td class="num">+$30,962</td></tr><tr><td>32</td><td>Jun 9, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,030</td><td class="num">+$32,992</td></tr><tr><td>33</td><td>Jun 10, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,018</td><td class="num">+$30,974</td></tr><tr><td>34</td><td>Jun 12, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$1,989</td><td class="num">+$32,962</td></tr><tr><td>35</td><td>Jun 15, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,057</td><td class="num">+$30,906</td></tr><tr><td>36</td><td>Jun 16, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,030</td><td class="num">+$28,876</td></tr><tr><td>37</td><td>Jun 17, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,046</td><td class="num">+$30,922</td></tr><tr><td>38</td><td>Jun 19, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,082</td><td class="num">+$28,840</td></tr><tr><td>39</td><td>Jun 22, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$1,994</td><td class="num">+$30,834</td></tr><tr><td>40</td><td>Jun 23, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$1,962</td><td class="num">+$32,796</td></tr><tr><td>41</td><td>Jun 24, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$1,998</td><td class="num">+$30,798</td></tr><tr><td>42</td><td>Jun 26, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,043</td><td class="num">+$32,840</td></tr><tr><td>43</td><td>Jun 29, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,076</td><td class="num">+$34,916</td></tr><tr><td>44</td><td>Jun 30, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,016</td><td class="num">+$36,932</td></tr><tr><td>45</td><td>Jul 2, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,010</td><td class="num">+$38,942</td></tr><tr><td>46</td><td>Jul 3, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$1,962</td><td class="num">+$40,904</td></tr><tr><td>47</td><td>Jul 7, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,100</td><td class="num">+$43,004</td></tr><tr><td>48</td><td>Jul 10, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,025</td><td class="num">+$45,030</td></tr><tr><td>49</td><td>Jul 14, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,061</td><td class="num">+$47,090</td></tr><tr><td>50</td><td>Jul 17, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,082</td><td class="num">+$45,008</td></tr><tr><td>51</td><td>Jul 21, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,062</td><td class="num">+$47,070</td></tr><tr><td>52</td><td>Jul 24, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,090</td><td class="num">+$49,160</td></tr><tr><td>53</td><td>Jul 27, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,040</td><td class="num">+$51,200</td></tr><tr><td>54</td><td>Jul 28, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,040</td><td class="num">+$53,240</td></tr><tr><td>55</td><td>Jul 29, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,082</td><td class="num">+$51,158</td></tr><tr><td>56</td><td>Jul 31, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,085</td><td class="num">+$53,242</td></tr><tr><td>57</td><td>Aug 4, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,079</td><td class="num">+$55,322</td></tr><tr><td>58</td><td>Aug 5, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,079</td><td class="num">+$57,400</td></tr><tr><td>59</td><td>Aug 6, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$1,980</td><td class="num">+$59,380</td></tr><tr><td>60</td><td>Aug 7, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,062</td><td class="num">+$61,442</td></tr><tr><td>61</td><td>Aug 10, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,048</td><td class="num">+$63,490</td></tr><tr><td>62</td><td>Aug 11, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,025</td><td class="num">+$65,514</td></tr><tr><td>63</td><td>Aug 12, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,091</td><td class="num">+$67,606</td></tr><tr><td>64</td><td>Aug 14, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,092</td><td class="num">+$69,698</td></tr><tr><td>65</td><td>Aug 17, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,052</td><td class="num">+$71,750</td></tr><tr><td>66</td><td>Aug 18, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,054</td><td class="num">+$73,804</td></tr><tr><td>67</td><td>Aug 21, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,082</td><td class="num">+$75,886</td></tr><tr><td>68</td><td>Aug 25, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,040</td><td class="num">+$77,926</td></tr><tr><td>69</td><td>Aug 27, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,058</td><td class="num">+$79,984</td></tr><tr><td>70</td><td>Aug 28, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,079</td><td class="num">+$77,906</td></tr><tr><td>71</td><td>Aug 31, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,032</td><td class="num">+$79,938</td></tr><tr><td>72</td><td>Sep 1, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,091</td><td class="num">+$82,028</td></tr><tr><td>73</td><td>Sep 2, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,042</td><td class="num">+$79,986</td></tr><tr><td>74</td><td>Sep 3, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$1,904</td><td class="num">+$78,082</td></tr><tr><td>75</td><td>Sep 4, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,026</td><td class="num">+$76,056</td></tr><tr><td>76</td><td>Sep 7, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,064</td><td class="num">+$78,120</td></tr><tr><td>77</td><td>Sep 8, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,074</td><td class="num">+$80,194</td></tr><tr><td>78</td><td>Sep 11, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$1,981</td><td class="num">+$82,175</td></tr><tr><td>79</td><td>Sep 15, 2026</td><td>Long</td><td>Long SL</td><td class="num">−$2,032</td><td class="num">+$80,144</td></tr><tr><td>80</td><td>Sep 16, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,058</td><td class="num">+$82,202</td></tr><tr><td>81</td><td>Sep 17, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,100</td><td class="num">+$84,302</td></tr><tr><td>82</td><td>Sep 18, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,060</td><td class="num">+$86,362</td></tr><tr><td>83</td><td>Sep 21, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,079</td><td class="num">+$88,440</td></tr><tr><td>84</td><td>Sep 22, 2026</td><td>Short</td><td>Short SL</td><td class="num">−$2,052</td><td class="num">+$86,388</td></tr><tr><td>85</td><td>Sep 23, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$2,088</td><td class="num">+$88,476</td></tr><tr><td>86</td><td>Sep 24, 2026</td><td>Short</td><td>Short TP</td><td class="num">+$2,082</td><td class="num">+$90,558</td></tr><tr><td>87</td><td>Sep 25, 2026</td><td>Long</td><td>Long TP</td><td class="num">+$1,980</td><td class="num">+$92,538</td></tr></tbody>
+                  </table>
+                </div>
+              </details>
+            </article>
+          </div>
+
+          <div class="loop reveal">
+            <div class="loop__head">
+              <h3>How the desk runs itself</h3>
+              <div class="loop__actions">
+                <button class="btn btn--sm" type="button" data-arch="propdesk"><svg class="icon" aria-hidden="true"><use href="#i-diagram" /></svg>Architecture</button>
+                <a class="btn btn--sm btn--ghost" href="https://github.com/stevenGGG23/Prop-Desk" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Prop Desk code</a>
+              </div>
+            </div>
+            <ol class="loop__steps"><li class="loop-step"><span class="loop-step__num">01</span><h4>Signal</h4><p>Sniper Range Bot V2 spots a range breakout on the 15-minute MNQ chart and fires a TradingView alert with a 1:1 take profit and stop.</p></li><li class="loop-step"><span class="loop-step__num">02</span><h4>Execute</h4><p>TradersPost turns that alert into an order on every connected prop-firm and personal account, so no one clicks anything.</p></li><li class="loop-step"><span class="loop-step__num">03</span><h4>Track</h4><p>Each closed trade posts its P&amp;L to Prop Desk, which recalculates every account's room, survivable losses and trailing floor.</p></li><li class="loop-step"><span class="loop-step__num">04</span><h4>Recalculate</h4><p>My agent sets the next session's size for each account, updates and verifies the TradingView alerts, reruns the Monte Carlo odds and emails me the report.</p></li>
+            </ol>
+          </div>
+
+          <div class="subhead reveal"><h3>More from the trading desk</h3></div>
+          <ul class="shots reveal">
+              <li><button class="shot" type="button" data-lightbox="assets/img/trading/sniper-tradingview-full.webp" data-caption="Sniper Range Bot V2 in TradingView: Key stats, the equity curve and the strategy inputs: $2,100 risk per trade, 1:1 reward-to-risk and a per-weekday direction filter.">
+                <img src="assets/img/trading/sniper-tradingview-full-800.webp" alt="Sniper Range Bot V2 in TradingView" width="1600" height="918" loading="lazy" decoding="async" />
+                <span class="shot__body"><span class="shot__title">Sniper Range Bot V2 in TradingView</span><span class="shot__cap">Key stats, the equity curve and the strategy inputs: $2,100 risk per trade, 1:1 reward-to-risk and a per-weekday direction filter.</span></span>
+              </button></li>
+              <li><button class="shot shot--wide" type="button" data-lightbox="assets/img/trading/nq-scalping.webp" data-caption="NQ Scalping System: A second strategy. 365-day TradingView backtest: +$79,280 (+158.56%), 227 of 278 trades profitable (81.65%), profit factor 2.126, max drawdown 15.78%.">
+                <img src="assets/img/trading/nq-scalping-800.webp" alt="NQ Scalping System" width="1573" height="466" loading="lazy" decoding="async" />
+                <span class="shot__body"><span class="shot__title">NQ Scalping System</span><span class="shot__cap">A second strategy. 365-day TradingView backtest: +$79,280 (+158.56%), 227 of 278 trades profitable (81.65%), profit factor 2.126, max drawdown 15.78%.</span></span>
+              </button></li>
+              <li><button class="shot" type="button" data-lightbox="assets/img/trading/strategy-research.webp" data-caption="Strategy research in Python: Backtesting new ideas (regime overlays, Kalman-slope trend, mean reversion, multi-horizon momentum) against market data before they go anywhere near an account.">
+                <img src="assets/img/trading/strategy-research-800.webp" alt="Strategy research in Python" width="1010" height="1034" loading="lazy" decoding="async" />
+                <span class="shot__body"><span class="shot__title">Strategy research in Python</span><span class="shot__cap">Backtesting new ideas (regime overlays, Kalman-slope trend, mean reversion, multi-horizon momentum) against market data before they go anywhere near an account.</span></span>
+              </button></li>
+          </ul>
+          <div class="prop-certs" id="prop-certs" hidden>
+            <!-- To show prop-firm certificates: put the files in assets/img/trading/certificates/,
+                 copy one <li> per file into the list below, then delete the word "hidden" above.
+                 <li><button class="cert-tile" type="button" data-lightbox="assets/img/trading/certificates/FILE.webp" data-caption="Apex 50K funded">
+                   <img src="assets/img/trading/certificates/FILE.webp" alt="Apex 50K funded certificate" loading="lazy" /><span>Apex 50K funded</span></button></li> -->
+            <div class="subhead"><h3>Prop-firm certificates</h3></div>
+            <ul class="cert-grid"></ul>
+          </div>
+          <!--TRADING:end-->
+        </div>
+      </section>
+
+      <!-- Research + certifications -->
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="container">
+          <h2 class="section-title reveal" id="research-title"><span class="path">~/</span>research</h2>
+          <!--RESEARCH:start-->
+          <article class="paper reveal">
+            <div class="paper__badge" aria-hidden="true"><svg class="icon"><use href="#i-shield" /></svg></div>
+            <div>
+              <div class="paper__kicker">
+                <span class="eyebrow">Published April 2026 · Zenodo</span>
+                <span class="eyebrow" style="color:var(--muted)">Sole author</span>
+              </div>
+              <h3>Security Audit of WordPress 4.7.0: A Comparative Evaluation of SAST and DAST Tools Against a Known CVE Record</h3>
+              <p>
+                I audited WordPress 4.7.0, a release with well-documented critical CVEs, using one static tool (Semgrep) and one
+                dynamic tool (WPScan) in an isolated Docker Compose lab, then mapped every finding to CWE and the OWASP Top 10.
+                WPScan confirmed <span class="strong">114 known CVEs with zero false positives</span>, while Semgrep raised
+                <span class="strong">232 code-level flags at about a 2.5% true-positive rate</span>. The two tools cover
+                different ground, and neither is enough alone.
+              </p>
+              <ul class="tags" aria-label="Methods and tools">
+                <li class="tag">Python</li><li class="tag">Docker</li><li class="tag">Semgrep</li><li class="tag">WPScan</li><li class="tag">OWASP Top 10</li><li class="tag">CWE</li>
+              </ul>
+              <div class="paper__actions">
+                <a class="btn btn--sm" href="https://zenodo.org/records/19638502" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Read the paper</a>
+                <a class="btn btn--sm btn--ghost" href="https://doi.org/10.5281/zenodo.19638502" target="_blank" rel="noopener">DOI 10.5281/zenodo.19638502</a>
+              </div>
+            </div>
+          </article>
+          <!--RESEARCH:end-->
+
+          <div class="certs-wrap reveal">
+            <!--CERTS:start-->
+          <div class="subhead"><h3>Certifications <span class="eyebrow">20 credentials</span></h3></div>
+          <ul class="cert-gallery">
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/databricks-genai.webp" data-caption="Generative AI Fundamentals · Databricks Academy · Aug 2026" data-verify="https://credentials.databricks.com/f32e708c-718c-4fdd-a7f9-86f28b9451cd" aria-label="View certificate: Generative AI Fundamentals">
+                  <img src="assets/img/certs/databricks-genai-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Generative AI Fundamentals</h4>
+                  <p class="cert-card__meta">Databricks Academy · Aug 2026</p>
+                  <a class="cert-card__verify" href="https://credentials.databricks.com/f32e708c-718c-4fdd-a7f9-86f28b9451cd" target="_blank" rel="noopener">Verify<svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> Generative AI Fundamentals</span></a>
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/aws-realtime-pipelines.webp" data-caption="Real-Time Data Pipelines &amp; Analytics on AWS · LearnKartS · Coursera · Aug 2026" data-verify="https://coursera.org/verify/PJ9W53NOL0W1" aria-label="View certificate: Real-Time Data Pipelines &amp; Analytics on AWS">
+                  <img src="assets/img/certs/aws-realtime-pipelines-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Real-Time Data Pipelines &amp; Analytics on AWS</h4>
+                  <p class="cert-card__meta">LearnKartS · Coursera · Aug 2026</p>
+                  <a class="cert-card__verify" href="https://coursera.org/verify/PJ9W53NOL0W1" target="_blank" rel="noopener">Verify<svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> Real-Time Data Pipelines &amp; Analytics on AWS</span></a>
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/azure-databricks.webp" data-caption="Fundamentals of Azure Databricks · Packt · Coursera · Aug 2026" data-verify="https://coursera.org/verify/3T2YUF7T5VAO" aria-label="View certificate: Fundamentals of Azure Databricks">
+                  <img src="assets/img/certs/azure-databricks-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Fundamentals of Azure Databricks</h4>
+                  <p class="cert-card__meta">Packt · Coursera · Aug 2026</p>
+                  <a class="cert-card__verify" href="https://coursera.org/verify/3T2YUF7T5VAO" target="_blank" rel="noopener">Verify<svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> Fundamentals of Azure Databricks</span></a>
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/power-bi-dax.webp" data-caption="Master Power BI Analytics &amp; Dashboards with DAX · EDUCBA · Coursera · Jun 2026" data-verify="https://coursera.org/verify/G7RXZ8K4ZBI9" aria-label="View certificate: Master Power BI Analytics &amp; Dashboards with DAX">
+                  <img src="assets/img/certs/power-bi-dax-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Master Power BI Analytics &amp; Dashboards with DAX</h4>
+                  <p class="cert-card__meta">EDUCBA · Coursera · Jun 2026</p>
+                  <a class="cert-card__verify" href="https://coursera.org/verify/G7RXZ8K4ZBI9" target="_blank" rel="noopener">Verify<svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> Master Power BI Analytics &amp; Dashboards with DAX</span></a>
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/google-analytics.webp" data-caption="Google Analytics Certification · Google Skillshop · Dec 2025" data-verify="https://skillshop.credential.net/686f3e99-87ac-4bdd-b47b-b834c9c34cc5" aria-label="View certificate: Google Analytics Certification">
+                  <img src="assets/img/certs/google-analytics-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Google Analytics Certification</h4>
+                  <p class="cert-card__meta">Google Skillshop · Dec 2025</p>
+                  <a class="cert-card__verify" href="https://skillshop.credential.net/686f3e99-87ac-4bdd-b47b-b834c9c34cc5" target="_blank" rel="noopener">Verify<svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> Google Analytics Certification</span></a>
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/ibm-deep-learning-gpus.webp" data-caption="Accelerating Deep Learning with GPUs · IBM · Cognitive Class · Dec 2025" data-verify="https://courses.cognitiveclass.ai/certificates/9f213d99a235479bbcc7715b8bf26652" aria-label="View certificate: Accelerating Deep Learning with GPUs">
+                  <img src="assets/img/certs/ibm-deep-learning-gpus-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Accelerating Deep Learning with GPUs</h4>
+                  <p class="cert-card__meta">IBM · Cognitive Class · Dec 2025</p>
+                  <a class="cert-card__verify" href="https://courses.cognitiveclass.ai/certificates/9f213d99a235479bbcc7715b8bf26652" target="_blank" rel="noopener">Verify<svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> Accelerating Deep Learning with GPUs</span></a>
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/seeq-data-scientist-path.webp" data-caption="Data Scientist Learning Path · Seeq · Jul 2025" data-gallery='[{&quot;src&quot;: &quot;assets/img/certs/seeq-data-scientist-path.webp&quot;, &quot;caption&quot;: &quot;Data Scientist Learning Path&quot;}, {&quot;src&quot;: &quot;assets/img/certs/seeq-advanced-analytics.webp&quot;, &quot;caption&quot;: &quot;Advanced Analytics Skills Training&quot;}, {&quot;src&quot;: &quot;assets/img/certs/seeq-data-lab.webp&quot;, &quot;caption&quot;: &quot;Data Lab Training&quot;}, {&quot;src&quot;: &quot;assets/img/certs/seeq-foundations-training.webp&quot;, &quot;caption&quot;: &quot;Foundations Analytics Skills Training&quot;}, {&quot;src&quot;: &quot;assets/img/certs/seeq-foundations-test.webp&quot;, &quot;caption&quot;: &quot;Foundations Analytics Skills Test&quot;}, {&quot;src&quot;: &quot;assets/img/certs/seeq-elearning-bootcamp.webp&quot;, &quot;caption&quot;: &quot;e-Learning Bootcamp&quot;}]' aria-label="View certificate: Data Scientist Learning Path">
+                  <img src="assets/img/certs/seeq-data-scientist-path-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" /><span class="cert-card__more">+5 Seeq certificates</span>
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Data Scientist Learning Path</h4>
+                  <p class="cert-card__meta">Seeq · Jul 2025</p>
+                  
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/data-analytics-bootcamp.webp" data-caption="Data Analytics Bootcamp · Certificate of completion" aria-label="View certificate: Data Analytics Bootcamp">
+                  <img src="assets/img/certs/data-analytics-bootcamp-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">Data Analytics Bootcamp</h4>
+                  <p class="cert-card__meta">Certificate of completion</p>
+                  
+                </div>
+              </li>
+              <li class="cert-card">
+                <button class="cert-card__media" type="button" data-lightbox="assets/img/certs/osha-10.webp" data-caption="OSHA 10-Hour General Industry · CareerSafe · Mar 2021" aria-label="View certificate: OSHA 10-Hour General Industry">
+                  <img src="assets/img/certs/osha-10-thumb.webp" alt="" width="800" height="600" loading="lazy" decoding="async" />
+                </button>
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">OSHA 10-Hour General Industry</h4>
+                  <p class="cert-card__meta">CareerSafe · Mar 2021</p>
+                  
+                </div>
+              </li>
+          </ul>
+          <div class="cert-also">
+            <p class="cert-also__label">Also completed</p>
+            <ul class="cert-chips"><li><span class="cert-chip__name">Cloud Technical Essentials</span><span class="cert-chip__org">AWS</span></li><li><span class="cert-chip__name">Intro to SQL</span><span class="cert-chip__org">Kaggle</span></li><li><span class="cert-chip__name">Python</span><span class="cert-chip__org">Kaggle</span></li><li><span class="cert-chip__name">Advanced SQL</span><span class="cert-chip__org">Kaggle</span></li><li><span class="cert-chip__name">Introduction to Generative AI</span><span class="cert-chip__org">Google</span></li><li><span class="cert-chip__name">Claude 101</span><span class="cert-chip__org">Anthropic</span></li></ul>
+          </div>
+          <!--CERTS:end-->
+          </div>
+        </div>
+      </section>
+
+      <!-- Videos -->
+      <section class="section" id="videos" aria-labelledby="videos-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="videos-title"><span class="path">~/</span>videos</h2>
+            <a class="link-arrow" href="https://www.youtube.com/@StevenGG488" target="_blank" rel="noopener">YouTube channel<svg class="icon"><use href="#i-arrow" /></svg></a>
+          </div>
+          <!--VIDEOS:start-->
+          <div class="videos reveal">
+            <div class="videos__main">
+              <div class="player" id="player">
+                <button class="yt-facade" type="button" data-id="ePZ4cazj3Gw" data-title="MTSU GradPath · Future FAANG" aria-label="Play video: MTSU GradPath · Future FAANG">
+                  <img src="assets/img/videos/ePZ4cazj3Gw.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+                  <span class="yt-play" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg></span>
+                  <span class="yt-caption"><strong>MTSU GradPath · Future FAANG</strong><span>Project walkthrough</span></span>
+                </button>
+              </div>
+              <div class="channel">
+                <img src="assets/img/steven-camera-168.webp" alt="Steven holding a Kodak camera up to his eye" width="168" height="168" loading="lazy" decoding="async" />
+                <div>
+                  <h3>@StevenGG488</h3>
+                  <p>Walkthroughs of my projects and data dives, from planning to code.</p>
+                </div>
+                <a class="btn btn--sm" href="https://www.youtube.com/@StevenGG488?sub_confirmation=1" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-youtube" /></svg>Subscribe</a>
+              </div>
+            </div>
+            <ul class="playlist" aria-label="More videos">
+                <li><button class="pl-item" type="button" aria-current="true" data-id="ePZ4cazj3Gw" data-title="MTSU GradPath · Future FAANG" data-meta="Project walkthrough" data-thumb="assets/img/videos/ePZ4cazj3Gw.webp">
+                  <span class="pl-thumb"><img src="assets/img/videos/ePZ4cazj3Gw-320.webp" alt="" width="320" height="180" loading="lazy" decoding="async" /><span class="dur">7:29</span></span>
+                  <span><span class="pl-title">MTSU GradPath · Future FAANG</span><span class="pl-meta">Project walkthrough</span></span>
+                </button></li>
+                <li><button class="pl-item" type="button" aria-current="false" data-id="ZnFNF_1SEKU" data-title="Concurrent Stock Market Simulator · CSCI 3240" data-meta="Systems project demo" data-thumb="assets/img/videos/ZnFNF_1SEKU.webp">
+                  <span class="pl-thumb"><img src="assets/img/videos/ZnFNF_1SEKU-320.webp" alt="" width="320" height="180" loading="lazy" decoding="async" /><span class="dur">10:00</span></span>
+                  <span><span class="pl-title">Concurrent Stock Market Simulator · CSCI 3240</span><span class="pl-meta">Systems project demo</span></span>
+                </button></li>
+                <li><button class="pl-item" type="button" aria-current="false" data-id="zQE02DplTjA" data-title="Data Dive 3 · NBA Salary + Stats" data-meta="Data analysis" data-thumb="assets/img/videos/zQE02DplTjA.webp">
+                  <span class="pl-thumb"><img src="assets/img/videos/zQE02DplTjA-320.webp" alt="" width="320" height="180" loading="lazy" decoding="async" /><span class="dur">8:27</span></span>
+                  <span><span class="pl-title">Data Dive 3 · NBA Salary + Stats</span><span class="pl-meta">Data analysis</span></span>
+                </button></li>
+                <li><button class="pl-item" type="button" aria-current="false" data-id="B5dIQVFi4Lo" data-title="Data Dive 2" data-meta="Data analysis" data-thumb="assets/img/videos/B5dIQVFi4Lo.webp">
+                  <span class="pl-thumb"><img src="assets/img/videos/B5dIQVFi4Lo-320.webp" alt="" width="320" height="180" loading="lazy" decoding="async" /><span class="dur">8:44</span></span>
+                  <span><span class="pl-title">Data Dive 2</span><span class="pl-meta">Data analysis</span></span>
+                </button></li>
+                <li><button class="pl-item" type="button" aria-current="false" data-id="ByDgGqsh7eA" data-title="Data Dive 1 · Ames Housing" data-meta="Data analysis" data-thumb="assets/img/videos/ByDgGqsh7eA.webp">
+                  <span class="pl-thumb"><img src="assets/img/videos/ByDgGqsh7eA-320.webp" alt="" width="320" height="180" loading="lazy" decoding="async" /><span class="dur">8:55</span></span>
+                  <span><span class="pl-title">Data Dive 1 · Ames Housing</span><span class="pl-meta">Data analysis</span></span>
+                </button></li>
+            </ul>
+          </div>
+          <!--VIDEOS:end-->
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container footer__inner">
+        <div class="footer__contact">
+          <a class="footer__email" href="mailto:stevengobran@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>stevengobran@gmail.com</a>
+          <button class="footer__copy" type="button" data-copy="stevengobran@gmail.com" aria-label="Copy email address"><svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg></button>
+          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <div class="footer__social">
+          <a class="icon-link" href="https://github.com/stevenGGG23" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github" /></svg></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/steven-gobran-17a1a4291/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a>
+          <a class="icon-link" href="https://www.youtube.com/@StevenGG488" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-youtube" /></svg></a>
+        </div>
+        <p class="footer__credit"><span>Designed &amp; built by Steven Gobran © <span id="year">2026</span></span><span><a href="https://github.com/stevenGGG23/StevenGobranWebsite.github.io" target="_blank" rel="noopener">Source</a></span></p>
+      </div>
+    </footer>
+
+    <button class="game-toggle" id="game-toggle" type="button" aria-pressed="false" title="Run and jump across the page">
+      <span class="game-toggle__dot" aria-hidden="true"></span><span class="game-toggle__label">game mode</span>
+    </button>
+
+    <dialog class="modal" id="modal" aria-labelledby="modal-title">
+      <div class="modal__inner">
+        <header class="modal__head">
+          <div>
+            <p class="eyebrow" id="modal-kicker"></p>
+            <h2 class="modal__title" id="modal-title"></h2>
+          </div>
+          <button class="round-btn modal__close" type="button" aria-label="Close"><svg class="icon"><use href="#i-close" /></svg></button>
+        </header>
+        <div class="modal__body" id="modal-body"></div>
+      </div>
+    </dialog>
+
+    <!-- Architecture diagrams (Mermaid source, rendered on demand) -->
+    <!--ARCH:start-->
+    <template id="arch-cyclist" data-title="Cyclist Behavior from GPS Trajectories" data-caption="A Python and Jupyter pipeline that turns raw SimRa smartphone GPS traces from Berlin into cleaned ride features, near-miss statistics and riding-style clusters.">
+      <pre class="mermaid-src">flowchart TD
+  subgraph SRC[&quot;1 · Parse&quot;]
+    direction LR
+    A[&quot;SimRa Berlin June 2023&lt;br/&gt;877 raw ride files&quot;] --&gt; B[&quot;parse_ride&lt;br/&gt;split incidents and GPS&quot;]
+  end
+  subgraph CLEAN[&quot;2 · Clean&quot;]
+    direction LR
+    C[&quot;Drop bad fixes&lt;br/&gt;accuracy over 20 m&quot;] --&gt; D[&quot;Remove speed spikes&lt;br/&gt;over 54 km/h&quot;] --&gt; E[&quot;Drop weak rides&lt;br/&gt;under 300 m or 2 min&quot;]
+  end
+  subgraph FEAT[&quot;3 · Feature engineering&quot;]
+    direction LR
+    F[&quot;Haversine distance&lt;br/&gt;and compass bearing&quot;] --&gt; G[&quot;Per-ride features&lt;br/&gt;speed, stops, turns, braking&quot;]
+  end
+  subgraph DATA[&quot;4 · pandas CSV tables&quot;]
+    H[&quot;rides_cl.csv&lt;br/&gt;856 rides&quot;]
+    I[&quot;incidents.csv&lt;br/&gt;408 near misses&quot;]
+    J[&quot;points.csv&lt;br/&gt;375,741 GPS points&quot;]
+  end
+  subgraph ANALYZE[&quot;5 · Analysis&quot;]
+    K[&quot;Incident stats&lt;br/&gt;types and parties&quot;]
+    L[&quot;Spearman&lt;br/&gt;feature correlations&quot;]
+    M[&quot;scikit-learn K-means&lt;br/&gt;k = 3, silhouette&quot;]
+    N[&quot;Matplotlib&lt;br/&gt;Berlin trace map&quot;]
+  end
+  SRC --&gt; CLEAN
+  CLEAN --&gt; FEAT
+  FEAT --&gt;|&quot;write&quot;| DATA
+  I --&gt; K
+  H --&gt; L
+  H --&gt; M
+  J --&gt; N
+  O[&quot;Findings&lt;br/&gt;close passes, riding styles&quot;]
+  K --&gt; O
+  L --&gt; O
+  M --&gt; O
+  N --&gt; O</pre>
+      <ol class="arch-steps"><li>Parses 877 SimRa ride files from Berlin, June 2023, splitting rider-tagged near-miss incidents from the GPS and sensor time series.</li><li>Cleans noisy GPS: drops fixes over 20 m error, spikes above 54 km/h, and rides under 300 m or 2 minutes.</li><li>Uses haversine distance and compass bearing between fixes to build per-ride speed, stop, turn and hard-braking features for 856 rides.</li><li>Profiles 408 near misses by type and road user, then runs Spearman correlations, revealing GPS noise that mimics jerky riding.</li><li>K-means on six standardized features finds steady cruisers and stop-and-go riders, plus a third cluster traced to phones in pockets.</li></ol>
+    </template>
+    <template id="arch-gradpath" data-title="MTSU GradPath" data-caption="GradPath keeps MTSU&#x27;s catalog and class schedule current through a test-gated GitHub Actions pipeline, then builds each student&#x27;s degree plan in a Flask app on Vercel.">
+      <pre class="mermaid-src">flowchart TD
+  subgraph Pipeline[&quot;GitHub Actions pipeline&quot;]
+    CRON[&quot;Cron at 3 AM Central&lt;br/&gt;weekly + monthly&quot;]
+    ACAL[&quot;MTSU Acalog API&lt;br/&gt;courses + programs&quot;]
+    BAN[&quot;MTSU Banner schedule&lt;br/&gt;sections per term&quot;]
+    EXP[&quot;scrape_courses.py&lt;br/&gt;fetch + build JSON&quot;]
+    GATE{&quot;pytest gate&quot;}
+    REPO[(&quot;main branch&lt;br/&gt;catalog + schedule JSON&quot;)]
+    ISSUE[&quot;GitHub issue&lt;br/&gt;keeps last good data&quot;]
+  end
+  subgraph Runtime[&quot;Flask on Vercel&quot;]
+    FLASK[&quot;Flask routes&lt;br/&gt;serverless api/index.py&quot;]
+    STORE[&quot;catalog_store&lt;br/&gt;JSON in memory&quot;]
+    GEN[&quot;generate_plan&lt;br/&gt;prereqs + offered terms&quot;]
+    VAL[&quot;validate_plan&lt;br/&gt;independent re-check&quot;]
+  end
+  subgraph Browser[&quot;Student browser&quot;]
+    UI[&quot;Planner form&lt;br/&gt;major + completed courses&quot;]
+    OUT[&quot;Semester plan&lt;br/&gt;Mermaid prerequisite map&quot;]
+    TOOLS[&quot;Download PDF&lt;br/&gt;GPA calculator&quot;]
+  end
+  CRON --&gt; EXP
+  ACAL --&gt;|&quot;JSON&quot;| EXP
+  BAN --&gt;|&quot;HTML&quot;| EXP
+  EXP --&gt; GATE
+  GATE --&gt;|&quot;pass: bot commits&quot;| REPO
+  GATE --&gt;|&quot;fail&quot;| ISSUE
+  REPO --&gt;|&quot;auto-deploy&quot;| FLASK
+  REPO --&gt;|&quot;bundled data&quot;| STORE
+  UI --&gt;|&quot;POST /&quot;| FLASK
+  FLASK --&gt; GEN
+  STORE --&gt; GEN
+  GEN --&gt; VAL
+  VAL --&gt;|&quot;plan + warnings&quot;| OUT
+  OUT --&gt; TOOLS</pre>
+      <ol class="arch-steps"><li>A GitHub Actions cron pulls MTSU&#x27;s Acalog catalog API monthly and the Banner class schedule weekly, then turns both into JSON.</li><li>A pytest gate checks that every major still plans to 100%. Only then does a bot commit the data; otherwise it opens an issue.</li><li>Each push to main auto-deploys to Vercel, where Flask loads the catalog JSON into memory, so no database is needed per request.</li><li>generate_plan schedules each term around prerequisites and the seasons a course is offered, and validate_plan re-checks the result on its own.</li><li>Students get a semester plan with a Mermaid prerequisite map, plus print-to-PDF export and a what-if GPA calculator.</li></ol>
+    </template>
+    <template id="arch-lakehouse" data-title="GSC NAM ETO Lakehouse" data-caption="Medallion lakehouse: synthetic order data flows from S3 through Databricks Delta tables into Redshift for Tableau.">
+      <pre class="mermaid-src">flowchart TD
+  subgraph ING[&quot;1 · Land&quot;]
+    direction LR
+    A[&quot;Python generator&lt;br/&gt;synthetic ETO orders&quot;] --&gt; B[&quot;AWS S3&lt;br/&gt;raw landing zone&quot;]
+  end
+  subgraph DBX[&quot;2 · Databricks Delta Lake&quot;]
+    direction LR
+    C[&quot;Bronze&lt;br/&gt;raw ingest&quot;] --&gt; D[&quot;Silver&lt;br/&gt;refined with PySpark + SQL&quot;] --&gt; E[&quot;Gold&lt;br/&gt;analytics-ready&quot;]
+  end
+  subgraph SERVE[&quot;3 · Serve&quot;]
+    direction LR
+    F[&quot;Amazon Redshift&quot;] --&gt; G[&quot;Tableau dashboards&quot;]
+  end
+  ING --&gt;|&quot;ingest&quot;| DBX
+  DBX --&gt;|&quot;COPY&quot;| SERVE</pre>
+      <ol class="arch-steps"><li>A Python job generates synthetic engineer-to-order records and lands them as raw files in S3.</li><li>Databricks ingests the files into bronze Delta tables exactly as they arrive.</li><li>PySpark and Spark SQL refine bronze into silver, then model analytics-ready gold tables.</li><li>Gold tables load into Amazon Redshift with COPY, where Tableau dashboards read them.</li></ol>
+    </template>
+    <template id="arch-openbank" data-title="Open Bank" data-caption="How a transfer works: a C# API holds a database lock on the account while a separate C++ service approves the transfer, then commits it and pushes the new balances to the browser over SignalR.">
+      <pre class="mermaid-src">flowchart LR
+  subgraph Client[&quot;Browser&quot;]
+    UI[&quot;Vanilla JS&lt;br/&gt;dashboard&quot;]
+  end
+  subgraph API[&quot;ASP.NET Core API&quot;]
+    Auth[&quot;JWT bearer&lt;br/&gt;auth&quot;]
+  end
+  subgraph TX[&quot;PostgreSQL transaction&quot;]
+    Lock[&quot;Lock source row&lt;br/&gt;FOR UPDATE&quot;]
+    Write[&quot;Debit, credit&lt;br/&gt;2 ledger rows&quot;]
+  end
+  subgraph ENG[&quot;C++17 engine&quot;]
+    Val[&quot;POST /validate&lt;br/&gt;fee + funds rules&quot;]
+  end
+  subgraph RT[&quot;SignalR WebSockets&quot;]
+    Hub[&quot;AccountHub&lt;br/&gt;per-account groups&quot;]
+  end
+  UI --&gt;|&quot;transfer + JWT&quot;| Auth
+  Auth --&gt; Lock
+  Lock --&gt;|&quot;balance&quot;| Val
+  Val --&gt;|&quot;approved + fee&quot;| Write
+  Write --&gt;|&quot;COMMIT&quot;| Hub
+  Hub --&gt;|&quot;BalanceUpdated&quot;| UI</pre>
+      <ol class="arch-steps"><li>The dashboard sends the transfer with a JWT, and the ASP.NET Core API checks it before any account data is touched.</li><li>A PostgreSQL transaction opens and locks the source account row with SELECT FOR UPDATE, and only the caller&#x27;s own account matches.</li><li>The C++17 engine checks the transfer over REST, adds a flat $1 fee and rejects it if funds are short.</li><li>If approved, both balances and two ledger rows are written together and committed. If rejected or unreachable, everything rolls back.</li><li>After commit, the SignalR AccountHub sends BalanceUpdated to both accounts&#x27; subscribers, so balances update live with no polling.</li></ol>
+    </template>
+    <template id="arch-propdesk" data-title="Prop Desk + trading agent" data-caption="A Pine Script bot trades MNQ through TradersPost, Prop Desk logs every fill and works out each account&#x27;s risk, and my agent resizes the TradingView alerts each day and emails the plan to my phone.">
+      <pre class="mermaid-src">flowchart TD
+    subgraph EXEC[&quot;Execution&quot;]
+        TV[&quot;Sniper Range Bot V2&lt;br/&gt;Pine Script on TradingView&quot;]
+        TP[&quot;TradersPost&lt;br/&gt;prop and personal accounts&quot;]
+    end
+    subgraph DESK[&quot;Prop Desk - Flask on Render&quot;]
+        WH[&quot;Inbound webhook&lt;br/&gt;dedupe by event_id&quot;]
+        DB[(&quot;PostgreSQL&lt;br/&gt;accounts, trades, log&quot;)]
+        ENG[&quot;Risk engine&lt;br/&gt;room, losses left, floor&quot;]
+        MC[&quot;NumPy Monte Carlo&lt;br/&gt;pass odds, payouts&quot;]
+        UI[&quot;Dashboard, advisor,&lt;br/&gt;stats, projections&quot;]
+        SCH[&quot;APScheduler&lt;br/&gt;6 AM ET snapshot&quot;]
+    end
+    subgraph AGENT[&quot;Desk agent&quot;]
+        AG[&quot;Recalculates risk&lt;br/&gt;per account each day&quot;]
+        SIM[&quot;Monte Carlo&lt;br/&gt;3,000 paths to $5k/month&quot;]
+    end
+    PHONE[&quot;Daily report on phone&lt;br/&gt;result, odds, new sizes&quot;]
+
+    TV --&gt;|&quot;order alert&quot;| TP
+    TV --&gt;|&quot;realized P&amp;L&quot;| WH
+    WH -.-&gt;|&quot;signal forward&quot;| TP
+    WH --&gt; DB
+    DB --&gt; ENG --&gt; UI
+    DB --&gt; MC --&gt; UI
+    DB --&gt; SCH
+    SCH --&gt;|&quot;Gmail&quot;| PHONE
+    DB --&gt;|&quot;day results&quot;| AG
+    AG --&gt; SIM
+    AG --&gt;|&quot;sets and verifies alert sizes&quot;| TV
+    SIM --&gt;|&quot;email&quot;| PHONE</pre>
+      <ol class="arch-steps"><li>Sniper Range Bot V2 fires TradingView alerts on MNQ 15m; TradersPost turns them into orders on prop and personal accounts.</li><li>Each closed trade posts realized P&amp;L to the Flask webhook, which drops repeated events by event_id and saves the trade to PostgreSQL.</li><li>The risk engine updates room, losses left and the trailing floor; NumPy Monte Carlo projects pass odds and funded payouts.</li><li>After each session my agent recalculates every account&#x27;s position size, updates the TradingView alerts and checks they took effect.</li><li>My phone gets the report: the day&#x27;s result, odds of reaching $5k/month across 3,000 paths, new sizes and consistency caps to watch.</li></ol>
+    </template>
+    <template id="arch-sonosus" data-title="Sonosus VR Education" data-caption="Sonosus VR Education is a Next.js 16 course platform where a purchase creates an enrollment that unlocks paywalled lessons, a timed exam and a certificate anyone can verify by ID.">
+      <pre class="mermaid-src">flowchart TD
+  L[&quot;Learner&quot;]
+  V[&quot;Employer or&lt;br/&gt;licensing board&quot;]
+  A[&quot;Dr. Rudy&lt;br/&gt;admin&quot;]
+  subgraph Auth[&quot;Auth&quot;]
+    AJ[&quot;Auth.js /api/auth&lt;br/&gt;JWT session cookie&quot;]
+    G[&quot;Google OAuth&quot;]
+  end
+  subgraph Store[&quot;Storefront&quot;]
+    CAT[&quot;Catalog and&lt;br/&gt;course pages&quot;]
+    CO[&quot;Checkout&lt;br/&gt;card, Apple Pay, Google Pay&quot;]
+  end
+  VER[&quot;Public verify page&quot;]
+  ST[&quot;Admin Studio&lt;br/&gt;courses, students, refunds&quot;]
+  Z[(&quot;Zustand stores&lt;br/&gt;orders, enrollments, certificates&quot;)]
+  EM[&quot;Email templates&lt;br/&gt;receipt, certificate&quot;]
+  subgraph Learn[&quot;Learning&quot;]
+    PL[&quot;Lesson player&lt;br/&gt;paywalled video&quot;]
+    EX[&quot;Timed final exam&quot;]
+    CERT[&quot;Certificate issued&lt;br/&gt;SVR-XXXX-XXXX ID&quot;]
+  end
+  L --&gt;|&quot;sign in&quot;| AJ
+  AJ &lt;--&gt; G
+  L --&gt; CAT
+  CAT --&gt;|&quot;Buy it now&quot;| CO
+  CO --&gt;|&quot;order creates enrollment&quot;| Z
+  V --&gt;|&quot;enter ID&quot;| VER
+  VER --&gt;|&quot;look up ID&quot;| Z
+  A --&gt; ST
+  ST --&gt;|&quot;edit, refund, grant&quot;| Z
+  Z --&gt;|&quot;queues&quot;| EM
+  Z --&gt;|&quot;enrollment unlocks&quot;| PL
+  PL --&gt;|&quot;all lessons watched&quot;| EX
+  EX --&gt;|&quot;pass 80 percent&quot;| CERT</pre>
+      <ol class="arch-steps"><li>Learners sign in with Google through Auth.js, which keeps a 30-day JWT session cookie.</li><li>Checkout runs in three steps (review, pay, confirm), then creates an order and an enrollment for each course.</li><li>The enrollment unlocks the video lessons. On a first view learners can&#x27;t skip ahead, and a moving name watermark stays on every view.</li><li>Once every lesson is complete, the timed exam opens. A score of 80 percent or higher issues a random SVR-XXXX-XXXX certificate ID.</li><li>Employers enter that ID on the public verify page. Dr. Rudy manages courses, students and refunds in the Studio.</li></ol>
+    </template>
+    <template id="arch-stocksim" data-title="Concurrent Stock Market Simulator" data-caption="A multi-threaded C server that serves terminal and browser traders at the same time, with writer-priority reader-writer locks protecting live prices and account balances.">
+      <pre class="mermaid-src">flowchart LR
+  subgraph Clients[&quot;Clients&quot;]
+    CLI[&quot;Terminal client&lt;br/&gt;client.c&quot;]
+    WEB[&quot;Web dashboard&lt;br/&gt;polls every 4s&quot;]
+  end
+  subgraph Listeners[&quot;Accept loops&quot;]
+    TL[&quot;terminal_listener&lt;br/&gt;TCP port 9000&quot;]
+    HL[&quot;http_listener&lt;br/&gt;HTTP/1.0 port 3000&quot;]
+  end
+  subgraph Workers[&quot;Detached pthreads&quot;]
+    TC[&quot;handle_terminal_client&lt;br/&gt;one per connection&quot;]
+    HC[&quot;handle_http_client&lt;br/&gt;one per request&quot;]
+  end
+  PU[&quot;price_updater thread&lt;br/&gt;random walk every 3s&quot;]
+  CSV[&quot;stocks.csv&lt;br/&gt;20 tickers&quot;]
+  subgraph Shared[&quot;Shared memory, RW locks&quot;]
+    ST[&quot;stocks table&lt;br/&gt;stock_lock&quot;]
+    AC[&quot;accounts table&lt;br/&gt;account_lock&quot;]
+  end
+  CLI --&gt;|&quot;line protocol&quot;| TL
+  WEB --&gt;|&quot;JSON REST&quot;| HL
+  TL --&gt;|&quot;spawn&quot;| TC
+  HL --&gt;|&quot;spawn&quot;| HC
+  Workers --&gt;|&quot;read_lock&quot;| ST
+  Workers --&gt;|&quot;write_lock&quot;| AC
+  PU --&gt;|&quot;write_lock&quot;| ST
+  CSV --&gt;|&quot;load&quot;| ST</pre>
+      <ol class="arch-steps"><li>At startup the server loads 20 tickers from stocks.csv, then starts a price thread, a terminal listener, and the HTTP listener.</li><li>Terminal clients connect on port 9000 and use a menu-driven line protocol; each response ends with an END marker.</li><li>The browser dashboard calls a hand-written HTTP/1.0 JSON API on port 3000 for stocks, accounts, buys, and sells.</li><li>Every connection or request gets its own detached pthread, so many traders can buy and sell at once.</li><li>Writer-priority reader-writer locks built from POSIX semaphores let reads run in parallel and keep price updates from starving.</li></ol>
+    </template>
+    <!--ARCH:end-->
+
+    <script src="assets/js/main.js?v=2026-11-04" defer></script>
   </body>
 </html>

@@ -1,0 +1,6 @@
+node_modules/
+.vercel/
+.DS_Store
+Thumbs.db
+# raw originals (full-size photos, phone recording with audio); the site uses the optimized copies in assets/
+_source/
