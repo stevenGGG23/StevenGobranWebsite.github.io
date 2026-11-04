@@ -37,6 +37,7 @@ assets/fonts/                  self-hosted Inter, Space Grotesk, JetBrains Mono 
 assets/img/                    photos, project screenshots, certificates, icons, share image
 assets/img/trading/            trading screenshots; certificates/ is for prop-firm certificates
 assets/video/                  Prop Desk phone recording (mp4 + webm)
+assets/research/               WordPress SAST/DAST paper (PDF)
 assets/Steven_Gobran_Resume.pdf
 favicon.ico, favicon.svg, site.webmanifest
 vercel.json                    clean URLs, cache + security headers

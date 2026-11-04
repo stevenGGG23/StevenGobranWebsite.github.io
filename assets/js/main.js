@@ -50,7 +50,7 @@
   if (toggle && menu) {
     menu.inert = true;
     toggle.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));
-    $$("a, [data-game-toggle]", menu).forEach((a) => a.addEventListener("click", () => setMenu(false)));
+    $$("a", menu).forEach((a) => a.addEventListener("click", () => setMenu(false)));
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && menu.classList.contains("is-open")) { setMenu(false); toggle.focus(); }
     });
@@ -384,10 +384,17 @@
     let inView = false;
     const pauseBtn = $(".spotlight__pause", wrap);
     const dialogOpen = () => !!document.querySelector("dialog[open]");
+    // Phones/tablets: slides stack (image over text) and have different heights,
+    // so the carousel sizes itself to the current slide and doesn't auto-advance.
+    const stacked = window.matchMedia("(max-width: 900px)");
+    const syncHeight = () => {
+      track.style.height = stacked.matches ? slides[index].offsetHeight + "px" : "";
+    };
 
     const go = (n, user = false) => {
       index = (n + slides.length) % slides.length;
       track.style.transform = `translateX(${-index * 100}%)`;
+      syncHeight();
       slides.forEach((s, i) => {
         const on = i === index;
         s.setAttribute("aria-hidden", String(!on));
@@ -402,7 +409,7 @@
       schedule();
     };
 
-    const stopped = () => reduceMotion.matches || paused || userPaused || !inView || dialogOpen();
+    const stopped = () => reduceMotion.matches || stacked.matches || paused || userPaused || !inView || dialogOpen();
     const schedule = () => {
       clearTimeout(timer);
       wrap.classList.toggle("is-paused", stopped());
@@ -462,6 +469,9 @@
         if (inView) go(index); else schedule();
       }, { threshold: 0.35 }).observe(wrap);
     }
+    stacked.addEventListener("change", () => { syncHeight(); schedule(); });
+    if ("ResizeObserver" in window) new ResizeObserver(syncHeight).observe(wrap);
+    document.fonts?.ready.then(syncHeight);
     go(0);
   }
 
@@ -472,15 +482,16 @@
     const filters = $$(".filter");
     const moreBtn = $("#show-more");
     const count = $("#project-count");
-    const LIMIT = 6;
+    const limit = () => (window.matchMedia("(max-width: 640px)").matches ? 4 : 6);
     let filter = "all";
     let expanded = false;
 
     const render = (animate) => {
+      const lim = limit();
       const matches = cards.filter((c) => filter === "all" || (c.dataset.area || "").split(" ").includes(filter));
       cards.forEach((c) => { c.hidden = true; c.classList.remove("is-filtered-in"); });
       matches.forEach((c, i) => {
-        const show = expanded || i < LIMIT;
+        const show = expanded || i < lim;
         c.hidden = !show;
         if (show && animate && !reduceMotion.matches) {
           c.style.animationDelay = Math.min(i, 8) * 45 + "ms";
@@ -488,7 +499,7 @@
         }
       });
       if (moreBtn) {
-        moreBtn.hidden = matches.length <= LIMIT;
+        moreBtn.hidden = matches.length <= lim;
         moreBtn.setAttribute("aria-expanded", String(expanded));
         $(".label", moreBtn).textContent = expanded ? "Show less" : `Show all ${matches.length}`;
       }
@@ -587,8 +598,11 @@
     const toggleGame = async () => {
       try { (await loadGame()).toggle(); } catch { /* offline: leave the button as is */ }
     };
-    gameBtn.addEventListener("click", toggleGame);
-    $$("[data-game-toggle]").forEach((b) => b.addEventListener("click", toggleGame));
+    gameBtn.addEventListener("click", () => {
+      // desktop only (the button is also hidden by CSS on phones and touch screens)
+      if (!window.matchMedia("(min-width: 901px) and (hover: hover) and (pointer: fine)").matches) return;
+      toggleGame();
+    });
     document.addEventListener("sg-game", (e) => {
       const on = e.detail.active;
       gameBtn.setAttribute("aria-pressed", String(on));

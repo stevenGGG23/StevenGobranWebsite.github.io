@@ -28,7 +28,7 @@
     <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/img/hero-map.png" as="image" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=2026-11-04c" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=2026-11-04d" />
 
     <script type="application/ld+json">
       {
@@ -119,7 +119,6 @@
         <a class="icon-link" href="https://www.linkedin.com/in/steven-gobran-17a1a4291/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a>
         <a class="icon-link" href="https://www.youtube.com/@StevenGG488" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-youtube" /></svg></a>
       </div>
-      <button class="btn btn--ghost mobile-menu__game" type="button" data-game-toggle>Play game mode</button>
     </div>
 
     <main id="main">
@@ -706,19 +705,54 @@
           </div>
 
           <div class="subhead reveal"><h3>More from the trading desk</h3></div>
-          <ul class="shots reveal">
-              <li><button class="shot" type="button" data-lightbox="assets/img/trading/sniper-tradingview-full.webp" data-caption="Sniper Range Bot V2 in TradingView: Key stats, the equity curve and the strategy inputs: $2,100 risk per trade, 1:1 reward-to-risk and a per-weekday direction filter.">
-                <img src="assets/img/trading/sniper-tradingview-full-800.webp" alt="Sniper Range Bot V2 in TradingView" width="1600" height="918" loading="lazy" decoding="async" />
-                <span class="shot__body"><span class="shot__title">Sniper Range Bot V2 in TradingView</span><span class="shot__cap">Key stats, the equity curve and the strategy inputs: $2,100 risk per trade, 1:1 reward-to-risk and a per-weekday direction filter.</span></span>
-              </button></li>
-              <li><button class="shot shot--wide" type="button" data-lightbox="assets/img/trading/nq-scalping.webp" data-caption="NQ Scalping System: A second strategy. 365-day TradingView backtest: +$79,280 (+158.56%), 227 of 278 trades profitable (81.65%), profit factor 2.126, max drawdown 15.78%.">
-                <img src="assets/img/trading/nq-scalping-800.webp" alt="NQ Scalping System" width="1573" height="466" loading="lazy" decoding="async" />
-                <span class="shot__body"><span class="shot__title">NQ Scalping System</span><span class="shot__cap">A second strategy. 365-day TradingView backtest: +$79,280 (+158.56%), 227 of 278 trades profitable (81.65%), profit factor 2.126, max drawdown 15.78%.</span></span>
-              </button></li>
-              <li><button class="shot" type="button" data-lightbox="assets/img/trading/strategy-research.webp" data-caption="Strategy research in Python: Backtesting new ideas (regime overlays, Kalman-slope trend, mean reversion, multi-horizon momentum) against market data before they go anywhere near an account.">
-                <img src="assets/img/trading/strategy-research-800.webp" alt="Strategy research in Python" width="1010" height="1034" loading="lazy" decoding="async" />
-                <span class="shot__body"><span class="shot__title">Strategy research in Python</span><span class="shot__cap">Backtesting new ideas (regime overlays, Kalman-slope trend, mean reversion, multi-horizon momentum) against market data before they go anywhere near an account.</span></span>
-              </button></li>
+          <ul class="desk reveal">
+            <li class="desk__item desk__item--sniper">
+              <button class="desk-card" type="button" data-lightbox="assets/img/trading/sniper-tradingview-full.webp" data-caption="Sniper Range Bot V2 in TradingView: key stats, the equity curve and the strategy inputs ($2,100 risk per trade, 1:1 reward-to-risk and a per-weekday direction filter).">
+                <span class="desk-card__media">
+                  <img src="assets/img/trading/sniper-tradingview-full-800.webp" alt="Sniper Range Bot V2 backtest in TradingView with key stats, equity curve and strategy inputs" width="1600" height="918" loading="lazy" decoding="async" />
+                  <span class="desk-card__view" aria-hidden="true">View</span>
+                </span>
+                <span class="desk-card__body">
+                  <span class="desk-card__kicker">TradingView · Pine Script</span>
+                  <span class="desk-card__title">Sniper Range Bot V2</span>
+                  <span class="desk-card__cap">The strategy as it runs in TradingView: key stats, the equity curve and the inputs behind every trade.</span>
+                  <span class="desk-card__chips"><span>$2,100 risk per trade</span><span>1:1 reward-to-risk</span><span>Weekday direction filter</span></span>
+                </span>
+              </button>
+            </li>
+            <li class="desk__item desk__item--research">
+              <button class="desk-card" type="button" data-lightbox="assets/img/trading/strategy-research.webp" data-caption="Strategy research in Python: new ideas are backtested against market data before they go anywhere near an account.">
+                <span class="desk-card__media">
+                  <img src="assets/img/trading/strategy-research-800.webp" alt="Python strategy research workspace with backtest code and results" width="1010" height="1034" loading="lazy" decoding="async" />
+                  <span class="desk-card__view" aria-hidden="true">View</span>
+                </span>
+                <span class="desk-card__body">
+                  <span class="desk-card__kicker">Python · backtesting</span>
+                  <span class="desk-card__title">Strategy research</span>
+                  <span class="desk-card__cap">New ideas get tested against market data before they go anywhere near an account.</span>
+                  <span class="desk-card__chips"><span>Regime overlay</span><span>Kalman slope</span><span>Mean reversion</span><span>Momentum</span></span>
+                </span>
+              </button>
+            </li>
+            <li class="desk__item desk__item--nq">
+              <button class="desk-card" type="button" data-lightbox="assets/img/trading/nq-scalping.webp" data-caption="NQ Scalping System: 365-day TradingView backtest. +$79,280 (+158.56%), 227 of 278 trades profitable (81.65%), profit factor 2.126, max drawdown 15.78%.">
+                <span class="desk-card__body">
+                  <span class="desk-card__kicker">TradingView backtest · last 365 days</span>
+                  <span class="desk-card__title">NQ Scalping System</span>
+                  <span class="desk-card__cap">A second strategy, scalping Nasdaq-100 futures.</span>
+                  <span class="desk-stats">
+                    <span><b>+$79.3K</b>net P&amp;L (+158.56%)</span>
+                    <span><b>81.65%</b>win rate · 227 of 278</span>
+                    <span><b>2.126</b>profit factor</span>
+                    <span><b>15.78%</b>max drawdown</span>
+                  </span>
+                </span>
+                <span class="desk-card__media">
+                  <img src="assets/img/trading/nq-scalping.webp" alt="NQ Scalping System equity curve in TradingView over 365 days" width="1573" height="466" loading="lazy" decoding="async" />
+                  <span class="desk-card__view" aria-hidden="true">View</span>
+                </span>
+              </button>
+            </li>
           </ul>
           <div class="prop-certs" id="prop-certs" hidden>
             <!-- To show prop-firm certificates: put the files in assets/img/trading/certificates/,
@@ -738,15 +772,18 @@
           <h2 class="section-title reveal" id="research-title"><span class="path">~/</span>research</h2>
           <!--RESEARCH:start-->
           <article class="paper reveal">
-            <div class="paper__badge" aria-hidden="true"><svg class="icon"><use href="#i-shield" /></svg></div>
-            <div>
+            <a class="paper__cover" href="assets/research/WordPress_4.7.0_SAST_DAST_Audit.pdf" target="_blank" rel="noopener">
+              <img src="assets/img/wordpress-paper-thumb.webp" alt="Title page of the paper Security Audit of WordPress 4.7.0" width="360" height="466" loading="lazy" decoding="async" />
+              <span class="paper__cover-label">Open PDF</span>
+            </a>
+            <div class="paper__body">
               <div class="paper__kicker">
                 <span class="eyebrow">Published April 2026 · Zenodo</span>
-                <span class="eyebrow" style="color:var(--muted)">Sole author</span>
+                <span class="eyebrow paper__authors">With Mena Ramzy · CSCI 4710</span>
               </div>
               <h3>Security Audit of WordPress 4.7.0: A Comparative Evaluation of SAST and DAST Tools Against a Known CVE Record</h3>
               <p>
-                I audited WordPress 4.7.0, a release with well-documented critical CVEs, using one static tool (Semgrep) and one
+                We audited WordPress 4.7.0, a release with well-documented critical CVEs, using one static tool (Semgrep) and one
                 dynamic tool (WPScan) in an isolated Docker Compose lab, then mapped every finding to CWE and the OWASP Top 10.
                 WPScan confirmed <span class="strong">114 known CVEs with zero false positives</span>, while Semgrep raised
                 <span class="strong">232 code-level flags at about a 2.5% true-positive rate</span>. The two tools cover
@@ -1181,6 +1218,6 @@
     </template>
     <!--ARCH:end-->
 
-    <script src="assets/js/main.js?v=2026-11-04" defer></script>
+    <script src="assets/js/main.js?v=2026-11-04d" defer></script>
   </body>
 </html>

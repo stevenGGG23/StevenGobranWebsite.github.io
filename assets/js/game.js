@@ -68,8 +68,8 @@
     ".section-title", ".subhead", ".about__text > p", ".tech-list", ".edu", ".edu__meta", ".portrait__frame",
     ".exp__tabs", ".exp__role", ".exp__panel:not([hidden]) .bullets li", ".exp__panel:not([hidden]) .tags",
     ".spotlight", ".spotlight__controls", ".filters", ".card:not([hidden])", ".more-wrap .btn",
-    ".lede", ".phone__frame", ".bot", ".stats", ".equity", ".days", ".loop__head", ".loop-step", ".shots li",
-    ".paper", ".cert-card", ".cert-chips li",
+    ".lede", ".phone__frame", ".bot", ".stats", ".equity", ".days", ".loop__head", ".loop-step",
+    ".paper", ".paper__cover", ".desk-card", ".cert-card", ".cert-chips li",
     ".player", ".channel", ".pl-item", ".footer__inner",
   ].join(",");
 
@@ -136,24 +136,10 @@
     wrap.innerHTML = `
       <canvas class="game-canvas" aria-hidden="true"></canvas>
       <p class="game-hint" role="status"><kbd>←</kbd><kbd>→</kbd> move <kbd>space</kbd> jump · again to double jump <kbd>↓</kbd> drop <kbd>esc</kbd> exit</p>
-      <p class="game-over" role="status" hidden>you fell</p>
-      <div class="game-touch" aria-hidden="true">
-        <button type="button" data-k="left">◀</button>
-        <button type="button" data-k="right">▶</button>
-        <button type="button" data-k="jump" class="game-touch__jump">jump</button>
-      </div>`;
+      <p class="game-over" role="status" hidden>you fell</p>`;
     document.body.appendChild(wrap);
     S.ui = { wrap, canvas: wrap.querySelector(".game-canvas"), hint: wrap.querySelector(".game-hint"), over: wrap.querySelector(".game-over") };
     S.ctx = S.ui.canvas.getContext("2d");
-    wrap.querySelectorAll(".game-touch button").forEach((b) => {
-      const k = b.dataset.k;
-      const down = (e) => { e.preventDefault(); press(k, true); };
-      const up = (e) => { e.preventDefault(); press(k, false); };
-      b.addEventListener("pointerdown", down);
-      b.addEventListener("pointerup", up);
-      b.addEventListener("pointercancel", up);
-      b.addEventListener("pointerleave", up);
-    });
     sizeCanvas();
     S.hintTimer = setTimeout(() => S && S.ui.hint.classList.add("is-faded"), 5000);
   }
@@ -427,8 +413,11 @@
   }
 
   /* ---------- public API ---------- */
+  // Desktop only: on phones and touch screens the page is too narrow to play on.
+  const SUPPORTED = window.matchMedia("(min-width: 901px) and (hover: hover) and (pointer: fine)");
+
   function start() {
-    if (S) return;
+    if (S || !SUPPORTED.matches) return;
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
     S = {
       keys: { left: false, right: false, jump: false, down: false },
@@ -449,11 +438,13 @@
     window.addEventListener("keyup", onKey, { capture: true });
     window.addEventListener("blur", onBlur);
     window.addEventListener("resize", onResize);
+    SUPPORTED.addEventListener("change", onSupportChange);
     S.raf = requestAnimationFrame(loop);
     document.dispatchEvent(new CustomEvent("sg-game", { detail: { active: true } }));
   }
 
   function onResize() { if (!S) return; sizeCanvas(); readPage(); buildLedges(); }
+  function onSupportChange() { if (!SUPPORTED.matches) stop(); }
 
   function stop() {
     if (!S) return;
@@ -465,6 +456,7 @@
     window.removeEventListener("keyup", onKey, { capture: true });
     window.removeEventListener("blur", onBlur);
     window.removeEventListener("resize", onResize);
+    SUPPORTED.removeEventListener("change", onSupportChange);
     docEl.classList.remove("game-on");
     S = null;
     document.dispatchEvent(new CustomEvent("sg-game", { detail: { active: false } }));
@@ -475,5 +467,6 @@
     stop,
     toggle() { if (S) stop(); else start(); },
     get active() { return !!S; },
+    get supported() { return SUPPORTED.matches; },
   };
 })();
